@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 const SOCIAL_LINKS = [
   { label: "f",  href: "#", ariaLabel: "Facebook" },
-  { label: "in", href: "#", ariaLabel: "Instagram" },
+  { label: "i", href: "#", ariaLabel: "Instagram" },
 ];
 
 export default function Footer() {
@@ -14,12 +14,12 @@ export default function Footer() {
         {/* About */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-6 h-6">
-              <img src={logo} alt="Speedcubing Belgium Logo" />
+            <div className="w-14 h-14">
+              <img src={logo} alt="Speedcubing Belgium Logo" className="rounded-sm" />
             </div>
             <span className="text-white font-bold text-sm">About SCB</span>
           </div>
-          <p className="text-gray-500 text-xs leading-relaxed">
+          <p className="text-gray-500 text-sm leading-relaxed">
             Speedcubing Belgium is the official representative organization for
             competitive Rubik's Cube solving in Belgium, affiliated with the
             World Cube Association (WCA).
@@ -35,7 +35,7 @@ export default function Footer() {
                 <li key={label}>
                   <a
                     href={href}
-                    className="text-gray-500 hover:text-gray-300 text-xs transition-colors"
+                    className="text-gray-500 hover:text-gray-300 text-sm transition-colors"
                   >
                     {label}
                   </a>
@@ -64,7 +64,7 @@ export default function Footer() {
 
       <div className="max-w-5xl mx-auto px-6 border-t border-white/10 pt-5 text-center">
         <p className="text-gray-600 text-xs">
-          © {new Date().getFullYear()} Speedcubing Belgium. All rights reserved.
+          © {new Date().getFullYear()} Speedcubing Belgium. Made by <a href="https://www.groweasy.be" className="text-blue-600 hover:text-gray-300 transition-colors" target="_blank" rel="noopener noreferrer">Grow Easy</a>. All rights reserved.
         </p>
       </div>
     </footer>
