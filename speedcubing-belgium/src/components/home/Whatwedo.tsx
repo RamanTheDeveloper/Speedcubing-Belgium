@@ -22,7 +22,7 @@ export default function WhatWeDoSection() {
                 <Icon size={20} className="text-yellow-400" />
               </div>
               <h3 className="text-white font-bold text-lg mb-3">{title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
+              <p className="text-gray-400 text-md leading-relaxed">{description}</p>
             </div>
           ))}
         </div>
