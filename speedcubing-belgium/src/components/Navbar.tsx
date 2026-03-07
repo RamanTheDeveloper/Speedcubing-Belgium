@@ -12,8 +12,8 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <div className="w-7 h-7">
-            <img src={logo} alt="Speedcubing Belgium Logo" className="w-full h-full object-contain" />
+          <div className="w-10 h-10">
+            <img src={logo} alt="Speedcubing Belgium Logo" className="w-full h-full object-contain rounded-sm" />
           </div>
           <span className="text-white font-bold text-sm tracking-wide">
             Speedcubing Belgium
