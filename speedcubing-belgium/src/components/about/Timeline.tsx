@@ -11,8 +11,7 @@ export default function Timeline() {
             Our Journey
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Our{" "}
-            <span className="text-yellow-500">Timeline</span>
+            Our History
           </h2>
         </div>
 

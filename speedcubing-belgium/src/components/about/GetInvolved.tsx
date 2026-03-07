@@ -17,8 +17,7 @@ export default function GetInvolved() {
     <section className="bg-gray-100 py-24 px-6 text-center">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-          Get{" "}
-          <span className="text-yellow-500">Involved</span>
+          Get Involved
         </h2>
         <p className="text-gray-500 text-base mb-10">
           Want to contribute to the Belgian speedcubing community? There are

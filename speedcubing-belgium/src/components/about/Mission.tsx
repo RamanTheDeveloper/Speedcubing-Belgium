@@ -1,8 +1,7 @@
-
 export default function MissionStatement() {
   return (
     <section className="bg-gray-50 py-20 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto flex justify-center">
         <div className="bg-white border border-gray-100 rounded-2xl px-8 py-10 max-w-2xl">
           <span className="inline-block bg-gray-900 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-wider">
             Our Mission
