@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "brand": "Speedcubing Belgium",
+    "links": [
+      { "label": "Home",         "href": "#" },
+      { "label": "About Us",     "href": "#about" },
+      { "label": "Competitions", "href": "#competitions" },
+      { "label": "Records",      "href": "#records" },
+      { "label": "Delegates",    "href": "#delegates" }
+    ]
+  },
+
+  "home": {
+    "hero": {
+      "badge": "Official WCA Organisation",
+      "title": "Welcome to\nSpeedcubing Belgium",
+      "subtitle": "Join the fastest growing puzzle sport in Belgium",
+      "primaryCta":   { "label": "View Competitions", "href": "#competitions" },
+      "secondaryCta": { "label": "National Records",  "href": "#records" }
+    },
+    "stats": [
+      { "value": "500+", "label": "Active Cubers" },
+      { "value": "50+",  "label": "Competitions to Date" },
+      { "value": "15+",  "label": "Official Events" },
+      { "value": "14",   "label": "Years Active" }
+    ],
+    "about": {
+      "badge": "Who We Are",
+      "title": "What is\nSpeedcubing Belgium?",
+      "paragraphs": [
+        "Speedcubing Belgium (SCB) is the official representative organization for speedcubing in Belgium, working in close collaboration with the World Cube Association (WCA).",
+        "We organize and oversee official speedcubing competitions throughout Belgium, where cubers of all skill levels compete to solve various twisty puzzles as fast as possible.",
+        "Whether you're a beginner who just learned to solve a Rubik's Cube or an experienced speedcuber chasing national records, SCB provides a welcoming community and competitive platform for all."
+      ],
+      "cta": { "label": "Learn More About Us", "href": "#about" }
+    },
+    "services": {
+      "badge": "Our Mission",
+      "title": "What We Do",
+      "items": [
+        {
+          "icon": "Trophy",
+          "title": "Organize Competitions",
+          "description": "We organize official WCA competitions across Belgium, ensuring fair play and professional event management."
+        },
+        {
+          "icon": "Star",
+          "title": "Promote Speedcubing",
+          "description": "We work to raise awareness about speedcubing through demonstrations, workshops, and community outreach."
+        },
+        {
+          "icon": "Users",
+          "title": "Build Community",
+          "description": "We foster a welcoming community where cubers can meet, share techniques, and support each other's growth."
+        }
+      ]
+    },
+    "joinCta": {
+      "title": "Ready to Join Us?",
+      "subtitle": "Check out our upcoming competitions and become part of the Belgian speedcubing scene!",
+      "cta": { "label": "View Upcoming Events", "href": "#competitions" }
+    }
+  },
+
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Learn more about Speedcubing Belgium and our mission to promote competitive cubing across the country."
+    },
+    "timeline": {
+      "badge": "Our Journey",
+      "title": "Our",
+      "titleAccent": "Timeline",
+      "events": [
+        {
+          "year": "2009",
+          "shortYear": "09",
+          "title": "The Beginning",
+          "description": "Speedcubing Belgium was founded by passionate cubers who wanted to create an organized structure for competitive cubing in Belgium."
+        },
+        {
+          "year": "2010",
+          "shortYear": "10",
+          "title": "First Major Competition",
+          "description": "We hosted our first large-scale WCA competition, bringing together cubers from across the country."
+        },
+        {
+          "year": "2014",
+          "shortYear": "14",
+          "title": "Community Growth",
+          "description": "Our community expanded significantly, with new delegates joining and more competitions being organized nationwide."
+        },
+        {
+          "year": "2018",
+          "shortYear": "18",
+          "title": "Record Breaking Year",
+          "description": "Belgian cubers achieved multiple national records, putting Belgium on the map in the international speedcubing scene."
+        },
+        {
+          "year": "2023",
+          "shortYear": "23",
+          "title": "Expanding Horizons",
+          "description": "We introduced new event formats and expanded our reach to underrepresented regions in Belgium."
+        },
+        {
+          "year": "2026",
+          "shortYear": "26",
+          "title": "Today",
+          "description": "We proudly serve hundreds of active competitors and continue to grow the Belgian speedcubing community."
+        }
+      ]
+    },
+    "mission": {
+      "badge": "Our Mission",
+      "title": "Promoting Speedcubing in Belgium",
+      "description": "To promote and develop speedcubing in Belgium by organizing high-quality competitions, fostering a vibrant community, and supporting cubers of all levels in their pursuit of excellence."
+    },
+    "getInvolved": {
+      "title": "Get",
+      "titleAccent": "Involved",
+      "subtitle": "Want to contribute to the Belgian speedcubing community? There are many ways to get involved!",
+      "actions": [
+        { "label": "Compete",   "href": "#competitions", "variant": "dark" },
+        { "label": "Volunteer", "href": "#volunteer",    "variant": "dark" },
+        { "label": "Organize",  "href": "#organize",     "variant": "outline" }
+      ]
+    }
+  },
+
+  "footer": {
+    "about": {
+      "heading": "About SCB",
+      "description": "Speedcubing Belgium is the official representative organization for competitive Rubik's Cube solving in Belgium, affiliated with the World Cube Association (WCA)."
+    },
+    "columns": [
+      {
+        "heading": "Quick Links",
+        "links": [
+          { "label": "WCA Competition",        "href": "#" },
+          { "label": "Become a Member",        "href": "#" },
+          { "label": "Organize a Competition", "href": "#" }
+        ]
+      },
+      {
+        "heading": "Contact Us",
+        "links": [
+          { "label": "info@speedcubing.be", "href": "mailto:info@speedcubing.be" }
+        ]
+      }
+    ],
+    "copyright": "Speedcubing Belgium. All rights reserved."
+  }
+}
