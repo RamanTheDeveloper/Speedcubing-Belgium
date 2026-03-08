@@ -19,22 +19,26 @@ export default function Timeline() {
         <ol className="relative">
           {TIMELINE_EVENTS.map((event, i) => {
             const isLast = i === TIMELINE_EVENTS.length - 1;
-            const isEarly = i < 2; // first two use yellow badge
+            const isZero = i % 3 === 0;
+            const isOne = i % 3 === 1;
 
             return (
               <li key={event.year} className="flex gap-6 pb-10">
 
                 {/* Left column: badge + vertical line */}
                 <div className="flex flex-col items-center">
-                  <div
-                    className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center text-sm font-extrabold z-10 ${
-                      isEarly
-                        ? "bg-yellow-400 text-gray-900"
-                        : "bg-gray-900 text-white"
+                    <div
+                    className={`w-12 h-12 shrink-0 rounded-full flex items-center justify-center text-sm font-extrabold z-10 
+                      ${
+                      isZero
+                      ? "bg-gray-900 text-white"
+                      : isOne
+                      ? "bg-yellow-400 text-gray-900"
+                      : "bg-red-600 text-white"
                     }`}
-                  >
+                    >
                     {event.shortYear}
-                  </div>
+                    </div>
                   {!isLast && (
                     <div className="w-px flex-1 bg-gray-200 mt-2" />
                   )}
