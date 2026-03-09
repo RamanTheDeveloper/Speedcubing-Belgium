@@ -21,7 +21,7 @@ export default function FirstTimeCompeting() {
           {tips.map((tip, i) => (
             <li key={i} className="flex items-start gap-3">
               <ArrowRight size={16} className="text-yellow-400 mt-0.5 shrink-0" />
-              <span className="text-gray-300 text-sm leading-relaxed">{tip}</span>
+              <span className="text-gray-300 text-md leading-relaxed">{tip}</span>
             </li>
           ))}
         </ul>

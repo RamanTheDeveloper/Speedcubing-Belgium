@@ -2,6 +2,10 @@ import type { Competition } from "../types/Wca";
 
 const WCA_OFFICIAL_BASE = "https://www.worldcubeassociation.org/api/v0";
 
+// Cache lives for 6 hours — WCA data updates at most once a day
+const CACHE_KEY = "wca_be_competitions";
+const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+
 // ─── Official WCA API types ───────────────────────────────────────────────────
 
 interface OfficialWCACompetition {
@@ -10,14 +14,43 @@ interface OfficialWCACompetition {
   venue: string;
   city: string;
   country_iso2: string;
-  start_date: string;   // "YYYY-MM-DD"
-  end_date: string;     // "YYYY-MM-DD"
+  start_date: string;
+  end_date: string;
   event_ids: string[];
   competitor_limit: number | null;
-  registration_open: string;   // ISO datetime
-  registration_close: string;  // ISO datetime
+  registration_open: string;
+  registration_close: string;
   url: string;
   announced_at: string;
+}
+
+interface CacheEntry {
+  fetchedAt: number;
+  data: OfficialWCACompetition[];
+}
+
+// ─── Cache helpers ────────────────────────────────────────────────────────────
+
+function readCache(): OfficialWCACompetition[] | null {
+  try {
+    const raw = sessionStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+
+    const entry: CacheEntry = JSON.parse(raw);
+    const isExpired = Date.now() - entry.fetchedAt > CACHE_TTL_MS;
+    return isExpired ? null : entry.data;
+  } catch {
+    return null;
+  }
+}
+
+function writeCache(data: OfficialWCACompetition[]): void {
+  try {
+    const entry: CacheEntry = { fetchedAt: Date.now(), data };
+    sessionStorage.setItem(CACHE_KEY, JSON.stringify(entry));
+  } catch {
+    // sessionStorage can be unavailable (e.g. private browsing quota exceeded) — fail silently
+  }
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
@@ -48,7 +81,6 @@ function enrichCompetition(raw: OfficialWCACompetition): Competition {
   const now = new Date();
   const startDate = new Date(raw.start_date);
   const endDate = new Date(raw.end_date);
-  // Set end of day so a comp ending today is still considered upcoming
   endDate.setHours(23, 59, 59, 999);
   const registrationOpen = new Date(raw.registration_open);
   const registrationClose = new Date(raw.registration_close);
@@ -71,25 +103,31 @@ function enrichCompetition(raw: OfficialWCACompetition): Competition {
   };
 }
 
-// ─── API calls ────────────────────────────────────────────────────────────────
+// ─── API call ─────────────────────────────────────────────────────────────────
 
 export async function fetchBelgiumCompetitions(): Promise<Competition[]> {
-  const today = toISODate(new Date());
+  // Return cached data if still fresh
+  const cached = readCache();
+  if (cached) {
+    return cached
+      .map(enrichCompetition)
+      .sort((a, b) => a.startDate.getTime() - b.startDate.getTime());
+  }
 
-  // Fetch upcoming competitions in Belgium from today onward
-  // The official API supports country_iso2 and start/end date filtering
+  // Cache miss — fetch from WCA and populate cache
+  const today = toISODate(new Date());
   const url = new URL(`${WCA_OFFICIAL_BASE}/competitions`);
   url.searchParams.set("country_iso2", "BE");
   url.searchParams.set("start", today);
   url.searchParams.set("per_page", "50");
 
   const response = await fetch(url.toString());
-
   if (!response.ok) {
     throw new Error(`Failed to fetch competitions: ${response.status}`);
   }
 
   const data: OfficialWCACompetition[] = await response.json();
+  writeCache(data);
 
   return data
     .map(enrichCompetition)
