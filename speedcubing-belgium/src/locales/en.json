@@ -149,32 +149,49 @@
         "label": "Register on WCA",
         "href": "https://www.worldcubeassociation.org/register"
       }
-    },
-    "footer": {
-      "about": {
-        "heading": "About SCB",
-        "description": "Speedcubing Belgium is the official representative organization for competitive Rubik's Cube solving in Belgium, affiliated with the World Cube Association (WCA)."
-      },
-      "columns": [
-        {
-          "heading": "Quick Links",
-          "links": [
-            { "label": "WCA Competition", "href": "#" },
-            { "label": "Become a Member", "href": "#" },
-            { "label": "Organize a Competition", "href": "#" }
-          ]
-        },
-        {
-          "heading": "Contact Us",
-          "links": [
-            {
-              "label": "info@speedcubing.be",
-              "href": "mailto:info@speedcubing.be"
-            }
-          ]
-        }
-      ],
-      "copyright": "Speedcubing Belgium. All rights reserved."
     }
+  },
+  "records": {
+    "hero": {
+      "title": "National Records",
+      "subtitle": "Celebrating the fastest times achieved by Belgian speedcubers in official WCA competitions."
+    },
+    "info": {
+      "badge": "Information",
+      "title": "About National",
+      "titleAccent": "Records",
+      "description": "National records are officially recognized by the World Cube Association (WCA) and must be set at official WCA competitions held in Belgium.",
+      "facts": [
+        "<strong>Single:</strong> The fastest single solve in an event",
+        "<strong>Average:</strong> The average of 5 solves (removing best and worst)",
+        "All times are verified by official WCA delegates and judges"
+      ]
+    }
+  },
+  "footer": {
+    "about": {
+      "heading": "About SCB",
+      "description": "Speedcubing Belgium is the official representative organization for competitive Rubik's Cube solving in Belgium, affiliated with the World Cube Association (WCA)."
+    },
+    "columns": [
+      {
+        "heading": "Quick Links",
+        "links": [
+          { "label": "WCA Competition", "href": "#" },
+          { "label": "Become a Member", "href": "#" },
+          { "label": "Organize a Competition", "href": "#" }
+        ]
+      },
+      {
+        "heading": "Contact Us",
+        "links": [
+          {
+            "label": "info@speedcubing.be",
+            "href": "mailto:info@speedcubing.be"
+          }
+        ]
+      }
+    ],
+    "copyright": "Speedcubing Belgium. All rights reserved."
   }
 }

@@ -9,6 +9,7 @@ const NAV_ROUTE_MAP: Record<string, string> = {
   "#":     "/",
   "#about": "/about",
   "#competitions": "/competitions",
+  "#records": "/records",
 };
 
 const LOCALES: { code: Locale; label: string }[] = [
