@@ -2,27 +2,59 @@
   "nav": {
     "brand": "Speedcubing Belgium",
     "links": [
-      { "label": "Accueil",      "href": "#" },
-      { "label": "À propos",     "href": "#about" },
-      { "label": "Compétitions", "href": "#competitions" },
-      { "label": "Records",      "href": "#records" },
-      { "label": "Délégués",     "href": "#delegates" }
+      {
+        "label": "Accueil",
+        "href": "#"
+      },
+      {
+        "label": "À propos",
+        "href": "#about"
+      },
+      {
+        "label": "Compétitions",
+        "href": "#competitions"
+      },
+      {
+        "label": "Records",
+        "href": "#records"
+      },
+      {
+        "label": "Délégués",
+        "href": "#delegates"
+      }
     ]
   },
-
   "home": {
     "hero": {
       "badge": "Organisation officielle WCA",
       "title": "Bienvenue chez\nSpeedcubing Belgium",
       "subtitle": "Rejoignez le sport de puzzle qui grandit le plus vite en Belgique",
-      "primaryCta":   { "label": "Voir les compétitions", "href": "#competitions" },
-      "secondaryCta": { "label": "Records nationaux",     "href": "#records" }
+      "primaryCta": {
+        "label": "Voir les compétitions",
+        "href": "#competitions"
+      },
+      "secondaryCta": {
+        "label": "Records nationaux",
+        "href": "#records"
+      }
     },
     "stats": [
-      { "value": "500+", "label": "Cubeurs actifs" },
-      { "value": "50+",  "label": "Compétitions à ce jour" },
-      { "value": "15+",  "label": "Épreuves officielles" },
-      { "value": "14",   "label": "Ans d'activité" }
+      {
+        "value": "500+",
+        "label": "Cubeurs actifs"
+      },
+      {
+        "value": "50+",
+        "label": "Compétitions à ce jour"
+      },
+      {
+        "value": "15+",
+        "label": "Épreuves officielles"
+      },
+      {
+        "value": "14",
+        "label": "Ans d'activité"
+      }
     ],
     "about": {
       "badge": "Qui nous sommes",
@@ -32,7 +64,10 @@
         "Nous organisons et supervisons des compétitions officielles de speedcubing dans toute la Belgique, où des cubeurs de tous niveaux s'affrontent pour résoudre divers casse-têtes le plus rapidement possible.",
         "Que vous soyez débutant et que vous venez d'apprendre à résoudre un Rubik's Cube, ou un speedcuber expérimenté visant des records nationaux, SCB offre une communauté accueillante et une plateforme compétitive pour tous."
       ],
-      "cta": { "label": "En savoir plus", "href": "#about" }
+      "cta": {
+        "label": "En savoir plus",
+        "href": "#about"
+      }
     },
     "services": {
       "badge": "Notre mission",
@@ -58,10 +93,12 @@
     "joinCta": {
       "title": "Prêt à nous rejoindre ?",
       "subtitle": "Découvrez nos prochaines compétitions et devenez membre de la scène speedcubing belge !",
-      "cta": { "label": "Voir les prochains événements", "href": "#competitions" }
+      "cta": {
+        "label": "Voir les prochains événements",
+        "href": "#competitions"
+      }
     }
   },
-
   "about": {
     "hero": {
       "title": "À propos",
@@ -120,13 +157,24 @@
       "titleAccent": "avec nous",
       "subtitle": "Vous souhaitez contribuer à la communauté belge du speedcubing ? Il existe de nombreuses façons de s'impliquer !",
       "actions": [
-        { "label": "Participer",  "href": "#competitions", "variant": "dark" },
-        { "label": "Bénévolat",   "href": "#volunteer",    "variant": "dark" },
-        { "label": "Organiser",   "href": "#organize",     "variant": "outline" }
+        {
+          "label": "Participer",
+          "href": "#competitions",
+          "variant": "dark"
+        },
+        {
+          "label": "Bénévolat",
+          "href": "#volunteer",
+          "variant": "dark"
+        },
+        {
+          "label": "Organiser",
+          "href": "#organize",
+          "variant": "outline"
+        }
       ]
     }
   },
-
   "footer": {
     "about": {
       "heading": "À propos de SCB",
@@ -136,18 +184,56 @@
       {
         "heading": "Liens rapides",
         "links": [
-          { "label": "Compétition WCA",         "href": "#" },
-          { "label": "Devenir membre",           "href": "#" },
-          { "label": "Organiser une compétition","href": "#" }
+          {
+            "label": "Compétition WCA",
+            "href": "#"
+          },
+          {
+            "label": "Devenir membre",
+            "href": "#"
+          },
+          {
+            "label": "Organiser une compétition",
+            "href": "#"
+          }
         ]
       },
       {
         "heading": "Contactez-nous",
         "links": [
-          { "label": "info@speedcubing.be", "href": "mailto:info@speedcubing.be" }
+          {
+            "label": "info@speedcubing.be",
+            "href": "mailto:info@speedcubing.be"
+          }
         ]
       }
     ],
     "copyright": "Speedcubing Belgium. Tous droits réservés."
+  },
+  "competitions": {
+    "hero": {
+      "title": "Compétitions à venir",
+      "subtitle": "Participez aux compétitions officielles de speedcubing sanctionnées par la WCA à travers la Belgique. Tous niveaux bienvenus !"
+    },
+    "upcoming": {
+      "title": "Compétitions à venir",
+      "empty": "Aucune compétition à venir pour le moment. Revenez bientôt !"
+    },
+    "firstTime": {
+      "badge": "Nouveau en compétition ?",
+      "title": "Première",
+      "titleAccent": "Compétition ?",
+      "subtitle": "Pas de panique ! Nos compétitions sont accessibles aux débutants. Voici ce que vous devez savoir :",
+      "tips": [
+        "Vous devez être capable de résoudre un Rubik's Cube (peu importe la vitesse !)",
+        "L'inscription se fait via le site de la World Cube Association",
+        "Apportez vos propres cubes — nous recommandons d'en avoir au moins un de rechange",
+        "Les participants s'aident mutuellement comme juges et scramblers — c'est l'esprit de la compétition !"
+      ],
+      "cta": {
+        "label": "S'inscrire sur la WCA",
+        "href": "https://www.worldcubeassociation.org/register"
+      }
+    }
   }
 }

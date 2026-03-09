@@ -2,27 +2,59 @@
   "nav": {
     "brand": "Speedcubing Belgium",
     "links": [
-      { "label": "Home",          "href": "#" },
-      { "label": "Over ons",      "href": "#about" },
-      { "label": "Wedstrijden",   "href": "#competitions" },
-      { "label": "Records",       "href": "#records" },
-      { "label": "Afgevaardigden","href": "#delegates" }
+      {
+        "label": "Home",
+        "href": "#"
+      },
+      {
+        "label": "Over ons",
+        "href": "#about"
+      },
+      {
+        "label": "Wedstrijden",
+        "href": "#competitions"
+      },
+      {
+        "label": "Records",
+        "href": "#records"
+      },
+      {
+        "label": "Afgevaardigden",
+        "href": "#delegates"
+      }
     ]
   },
-
   "home": {
     "hero": {
       "badge": "Officiële WCA-organisatie",
       "title": "Welkom bij\nSpeedcubing Belgium",
       "subtitle": "Doe mee aan de snelst groeiende puzzelsport in België",
-      "primaryCta":   { "label": "Bekijk wedstrijden", "href": "#competitions" },
-      "secondaryCta": { "label": "Nationale records",  "href": "#records" }
+      "primaryCta": {
+        "label": "Bekijk wedstrijden",
+        "href": "#competitions"
+      },
+      "secondaryCta": {
+        "label": "Nationale records",
+        "href": "#records"
+      }
     },
     "stats": [
-      { "value": "500+", "label": "Actieve cubers" },
-      { "value": "50+",  "label": "Wedstrijden tot nu toe" },
-      { "value": "15+",  "label": "Officiële disciplines" },
-      { "value": "14",   "label": "Jaar actief" }
+      {
+        "value": "500+",
+        "label": "Actieve cubers"
+      },
+      {
+        "value": "50+",
+        "label": "Wedstrijden tot nu toe"
+      },
+      {
+        "value": "15+",
+        "label": "Officiële disciplines"
+      },
+      {
+        "value": "14",
+        "label": "Jaar actief"
+      }
     ],
     "about": {
       "badge": "Wie we zijn",
@@ -32,7 +64,10 @@
         "We organiseren en begeleiden officiële speedcubing-wedstrijden door heel België, waar cubers van alle niveaus strijden om verschillende puzzels zo snel mogelijk op te lossen.",
         "Of je nu een beginner bent die net heeft geleerd een Rubik's Cube op te lossen of een ervaren speedcuber die achter nationale records jaagt, SCB biedt een gastvrije gemeenschap en een competitief platform voor iedereen."
       ],
-      "cta": { "label": "Meer over ons", "href": "#about" }
+      "cta": {
+        "label": "Meer over ons",
+        "href": "#about"
+      }
     },
     "services": {
       "badge": "Onze missie",
@@ -58,10 +93,12 @@
     "joinCta": {
       "title": "Klaar om mee te doen?",
       "subtitle": "Bekijk onze komende wedstrijden en word deel van de Belgische speedcubing-scene!",
-      "cta": { "label": "Bekijk aankomende evenementen", "href": "#competitions" }
+      "cta": {
+        "label": "Bekijk aankomende evenementen",
+        "href": "#competitions"
+      }
     }
   },
-
   "about": {
     "hero": {
       "title": "Over ons",
@@ -120,13 +157,24 @@
       "titleAccent": "mee",
       "subtitle": "Wil je bijdragen aan de Belgische speedcubing-gemeenschap? Er zijn veel manieren om betrokken te raken!",
       "actions": [
-        { "label": "Deelnemen",  "href": "#competitions", "variant": "dark" },
-        { "label": "Vrijwillig", "href": "#volunteer",    "variant": "dark" },
-        { "label": "Organiseer","href": "#organize",     "variant": "outline" }
+        {
+          "label": "Deelnemen",
+          "href": "#competitions",
+          "variant": "dark"
+        },
+        {
+          "label": "Vrijwillig",
+          "href": "#volunteer",
+          "variant": "dark"
+        },
+        {
+          "label": "Organiseer",
+          "href": "#organize",
+          "variant": "outline"
+        }
       ]
     }
   },
-
   "footer": {
     "about": {
       "heading": "Over SCB",
@@ -136,18 +184,56 @@
       {
         "heading": "Snelle links",
         "links": [
-          { "label": "WCA-wedstrijd",         "href": "#" },
-          { "label": "Lid worden",             "href": "#" },
-          { "label": "Een wedstrijd organiseren","href": "#" }
+          {
+            "label": "WCA-wedstrijd",
+            "href": "#"
+          },
+          {
+            "label": "Lid worden",
+            "href": "#"
+          },
+          {
+            "label": "Een wedstrijd organiseren",
+            "href": "#"
+          }
         ]
       },
       {
         "heading": "Contacteer ons",
         "links": [
-          { "label": "info@speedcubing.be", "href": "mailto:info@speedcubing.be" }
+          {
+            "label": "info@speedcubing.be",
+            "href": "mailto:info@speedcubing.be"
+          }
         ]
       }
     ],
     "copyright": "Speedcubing Belgium. Alle rechten voorbehouden."
+  },
+  "competitions": {
+    "hero": {
+      "title": "Aankomende wedstrijden",
+      "subtitle": "Doe mee aan officiële WCA-wedstrijden in heel België. Alle niveaus welkom!"
+    },
+    "upcoming": {
+      "title": "Aankomende wedstrijden",
+      "empty": "Momenteel geen aankomende wedstrijden. Kom binnenkort terug!"
+    },
+    "firstTime": {
+      "badge": "Nieuw in wedstrijden?",
+      "title": "Voor het eerst",
+      "titleAccent": "deelnemen?",
+      "subtitle": "Geen zorgen! Onze wedstrijden zijn beginnersvriendelijk. Dit moet je weten:",
+      "tips": [
+        "Je moet een Rubik's Cube kunnen oplossen (elke snelheid is goed!)",
+        "Inschrijven doe je via de World Cube Association website",
+        "Breng je eigen cubes mee — we raden aan er minstens één reservekubus bij te hebben",
+        "Deelnemers helpen elkaar als judge en scrambler — dat is deel van de ervaring!"
+      ],
+      "cta": {
+        "label": "Inschrijven via WCA",
+        "href": "https://www.worldcubeassociation.org/register"
+      }
+    }
   }
 }
