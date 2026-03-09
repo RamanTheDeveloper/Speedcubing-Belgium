@@ -18,8 +18,8 @@ export type Translations = typeof en;
 
 const localeModules: Record<Locale, () => Promise<Translations>> = {
   en:  () => import("./locales/en.json").then((m) => m.default as Translations),
-  fr:  () => import("./locales/fr.json").then((m) => m.default as Translations),
-  nl:  () => import("./locales/nl.json").then((m) => m.default as Translations),
+  fr:  () => import("./locales/fr.json").then((m) => m.default as unknown as Translations),
+  nl:  () => import("./locales/nl.json").then((m) => m.default as unknown as Translations),
 };
 
 // ─── Context ──────────────────────────────────────────────────────────────────

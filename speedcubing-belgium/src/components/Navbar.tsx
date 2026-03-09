@@ -8,6 +8,7 @@ import { useTranslation, type Locale } from "../i18n";
 const NAV_ROUTE_MAP: Record<string, string> = {
   "#":     "/",
   "#about": "/about",
+  "#competitions": "/competitions",
 };
 
 const LOCALES: { code: Locale; label: string }[] = [
