@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "brand": "Speedcubing Belgium",
+    "links": [
+      { "label": "Home",          "href": "#" },
+      { "label": "Over ons",      "href": "#about" },
+      { "label": "Wedstrijden",   "href": "#competitions" },
+      { "label": "Records",       "href": "#records" },
+      { "label": "Afgevaardigden","href": "#delegates" }
+    ]
+  },
+
+  "home": {
+    "hero": {
+      "badge": "Officiële WCA-organisatie",
+      "title": "Welkom bij\nSpeedcubing Belgium",
+      "subtitle": "Doe mee aan de snelst groeiende puzzelsport in België",
+      "primaryCta":   { "label": "Bekijk wedstrijden", "href": "#competitions" },
+      "secondaryCta": { "label": "Nationale records",  "href": "#records" }
+    },
+    "stats": [
+      { "value": "500+", "label": "Actieve cubers" },
+      { "value": "50+",  "label": "Wedstrijden tot nu toe" },
+      { "value": "15+",  "label": "Officiële disciplines" },
+      { "value": "14",   "label": "Jaar actief" }
+    ],
+    "about": {
+      "badge": "Wie we zijn",
+      "title": "Wat is\nSpeedcubing Belgium?",
+      "paragraphs": [
+        "Speedcubing Belgium (SCB) is de officiële vertegenwoordigende organisatie voor speedcubing in België, en werkt nauw samen met de World Cube Association (WCA).",
+        "We organiseren en begeleiden officiële speedcubing-wedstrijden door heel België, waar cubers van alle niveaus strijden om verschillende puzzels zo snel mogelijk op te lossen.",
+        "Of je nu een beginner bent die net heeft geleerd een Rubik's Cube op te lossen of een ervaren speedcuber die achter nationale records jaagt, SCB biedt een gastvrije gemeenschap en een competitief platform voor iedereen."
+      ],
+      "cta": { "label": "Meer over ons", "href": "#about" }
+    },
+    "services": {
+      "badge": "Onze missie",
+      "title": "Wat we doen",
+      "items": [
+        {
+          "icon": "Trophy",
+          "title": "Wedstrijden organiseren",
+          "description": "We organiseren officiële WCA-wedstrijden in heel België, met eerlijk spel en professioneel evenementenbeheer."
+        },
+        {
+          "icon": "Star",
+          "title": "Speedcubing promoten",
+          "description": "We werken aan bewustwording rond speedcubing via demonstraties, workshops en outreach naar de gemeenschap."
+        },
+        {
+          "icon": "Users",
+          "title": "Gemeenschap opbouwen",
+          "description": "We creëren een gastvrije gemeenschap waar cubers elkaar kunnen ontmoeten, technieken delen en elkaar ondersteunen."
+        }
+      ]
+    },
+    "joinCta": {
+      "title": "Klaar om mee te doen?",
+      "subtitle": "Bekijk onze komende wedstrijden en word deel van de Belgische speedcubing-scene!",
+      "cta": { "label": "Bekijk aankomende evenementen", "href": "#competitions" }
+    }
+  },
+
+  "about": {
+    "hero": {
+      "title": "Over ons",
+      "subtitle": "Leer meer over Speedcubing Belgium en onze missie om competitief cubing in heel het land te promoten."
+    },
+    "timeline": {
+      "badge": "Onze reis",
+      "title": "Onze",
+      "titleAccent": "tijdlijn",
+      "events": [
+        {
+          "year": "2009",
+          "shortYear": "09",
+          "title": "Het begin",
+          "description": "Speedcubing Belgium werd opgericht door gepassioneerde cubers die een georganiseerde structuur wilden creëren voor competitief cubing in België."
+        },
+        {
+          "year": "2010",
+          "shortYear": "10",
+          "title": "Eerste grote wedstrijd",
+          "description": "We organiseerden onze eerste grootschalige WCA-wedstrijd, waarbij cubers uit het hele land samenkwamen."
+        },
+        {
+          "year": "2014",
+          "shortYear": "14",
+          "title": "Groei van de gemeenschap",
+          "description": "Onze gemeenschap breidde zich aanzienlijk uit, met nieuwe afgevaardigden en meer wedstrijden verspreid over het hele land."
+        },
+        {
+          "year": "2018",
+          "shortYear": "18",
+          "title": "Recordjaar",
+          "description": "Belgische cubers behaalden meerdere nationale records en plaatsten België op de kaart in de internationale speedcubing-scene."
+        },
+        {
+          "year": "2023",
+          "shortYear": "23",
+          "title": "Nieuwe horizonten",
+          "description": "We introduceerden nieuwe eventformaten en breidden onze werking uit naar minder vertegenwoordigde regio's in België."
+        },
+        {
+          "year": "2026",
+          "shortYear": "26",
+          "title": "Vandaag",
+          "description": "We bedienen trots honderden actieve deelnemers en blijven de Belgische speedcubing-gemeenschap laten groeien."
+        }
+      ]
+    },
+    "mission": {
+      "badge": "Onze missie",
+      "title": "Speedcubing promoten in België",
+      "description": "Speedcubing in België promoten en ontwikkelen door het organiseren van kwalitatieve wedstrijden, het opbouwen van een levendige gemeenschap en het ondersteunen van cubers van alle niveaus in hun streven naar uitmuntendheid."
+    },
+    "getInvolved": {
+      "title": "Doe",
+      "titleAccent": "mee",
+      "subtitle": "Wil je bijdragen aan de Belgische speedcubing-gemeenschap? Er zijn veel manieren om betrokken te raken!",
+      "actions": [
+        { "label": "Deelnemen",  "href": "#competitions", "variant": "dark" },
+        { "label": "Vrijwillig", "href": "#volunteer",    "variant": "dark" },
+        { "label": "Organiseer","href": "#organize",     "variant": "outline" }
+      ]
+    }
+  },
+
+  "footer": {
+    "about": {
+      "heading": "Over SCB",
+      "description": "Speedcubing Belgium is de officiële vertegenwoordigende organisatie voor competitief Rubik's Cube oplossen in België, gelieerd aan de World Cube Association (WCA)."
+    },
+    "columns": [
+      {
+        "heading": "Snelle links",
+        "links": [
+          { "label": "WCA-wedstrijd",         "href": "#" },
+          { "label": "Lid worden",             "href": "#" },
+          { "label": "Een wedstrijd organiseren","href": "#" }
+        ]
+      },
+      {
+        "heading": "Contacteer ons",
+        "links": [
+          { "label": "info@speedcubing.be", "href": "mailto:info@speedcubing.be" }
+        ]
+      }
+    ],
+    "copyright": "Speedcubing Belgium. Alle rechten voorbehouden."
+  }
+}

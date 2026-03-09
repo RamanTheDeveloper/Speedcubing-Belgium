@@ -1,18 +1,13 @@
 import { useState } from "react";
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
-import type { Page } from "../App";
 import { useTranslation, type Locale } from "../i18n";
 
-interface NavbarProps {
-  currentPage: Page;
-  onNavigate: (page: Page) => void;
-}
-
-// Maps nav labels to their Page key for client-side routing
-const NAV_PAGE_MAP: Partial<Record<string, Page>> = {
-  Home: "home",
-  "About Us": "about",
+// Maps nav link hrefs to their route paths
+const NAV_ROUTE_MAP: Record<string, string> = {
+  "#":     "/",
+  "#about": "/about",
 };
 
 const LOCALES: { code: Locale; label: string }[] = [
@@ -21,19 +16,20 @@ const LOCALES: { code: Locale; label: string }[] = [
   { code: "fr", label: "FR" },
 ];
 
-export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [localeOpen, setLocaleOpen] = useState(false);
 
-  // ✅ Hook called inside the component
   const { locale, changeLocale, t } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleNavClick = (label: string) => {
-    const target = NAV_PAGE_MAP[label];
-    if (target) {
-      onNavigate(target);
-      setMobileOpen(false);
+  const handleNavClick = (href: string) => {
+    const route = NAV_ROUTE_MAP[href];
+    if (route) {
+      navigate(route);
     }
+    setMobileOpen(false);
   };
 
   const handleLocaleChange = (code: Locale) => {
@@ -41,9 +37,11 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
     setLocaleOpen(false);
   };
 
-  const isActive = (label: string): boolean => {
-    const target = NAV_PAGE_MAP[label];
-    return target !== undefined && currentPage === target;
+  const isActive = (href: string): boolean => {
+    const route = NAV_ROUTE_MAP[href];
+    if (!route) return false;
+    // Exact match for home, prefix match for others
+    return route === "/" ? location.pathname === "/" : location.pathname.startsWith(route);
   };
 
   const currentLocaleLabel = LOCALES.find((l) => l.code === locale)?.label ?? "EN";
@@ -52,9 +50,9 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-14">
 
-        {/* Logo — ✅ plain button, no nested interactive elements */}
+        {/* Logo */}
         <button
-          onClick={() => onNavigate("home")}
+          onClick={() => navigate("/")}
           className="flex items-center gap-2 cursor-pointer"
         >
           <div className="w-10 h-10">
@@ -71,31 +69,34 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
 
         {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-1">
-          {t.nav.links.map(({ label, href }) => (
-            <li key={label}>
-              {NAV_PAGE_MAP[label] ? (
-                <button
-                  onClick={() => handleNavClick(label)}
-                  className={`px-3 py-1.5 rounded text-sm font-medium transition-colors cursor-pointer ${
-                    isActive(label)
-                      ? "bg-yellow-400 text-gray-900 hover:bg-yellow-300"
-                      : "text-gray-300 hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  {label}
-                </button>
-              ) : (
-                <a
-                  href={href}
-                  className="block px-3 py-1.5 rounded text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
-                >
-                  {label}
-                </a>
-              )}
-            </li>
-          ))}
+          {t.nav.links.map(({ label, href }) => {
+            const isRouted = href in NAV_ROUTE_MAP;
+            return (
+              <li key={href}>
+                {isRouted ? (
+                  <button
+                    onClick={() => handleNavClick(href)}
+                    className={`px-3 py-1.5 rounded text-sm font-medium transition-colors cursor-pointer ${
+                      isActive(href)
+                        ? "bg-yellow-400 text-gray-900 hover:bg-yellow-300"
+                        : "text-gray-300 hover:text-white hover:bg-white/10"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ) : (
+                  <a
+                    href={href}
+                    className="block px-3 py-1.5 rounded text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                  >
+                    {label}
+                  </a>
+                )}
+              </li>
+            );
+          })}
 
-          {/* ✅ Language selector — single button toggles a dropdown, no nested buttons */}
+          {/* Language selector */}
           <li className="relative ml-2">
             <button
               onClick={() => setLocaleOpen((prev) => !prev)}
@@ -103,7 +104,10 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
             >
               <Globe size={14} />
               {currentLocaleLabel}
-              <ChevronDown size={12} className={`transition-transform ${localeOpen ? "rotate-180" : ""}`} />
+              <ChevronDown
+                size={12}
+                className={`transition-transform ${localeOpen ? "rotate-180" : ""}`}
+              />
             </button>
 
             {localeOpen && (
@@ -140,28 +144,29 @@ export default function Navbar({ currentPage, onNavigate }: NavbarProps) {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-gray-950 border-t border-white/10 px-6 py-4 flex flex-col gap-2">
-          {t.nav.links.map(({ label, href }) =>
-            NAV_PAGE_MAP[label] ? (
+          {t.nav.links.map(({ label, href }) => {
+            const isRouted = href in NAV_ROUTE_MAP;
+            return isRouted ? (
               <button
-                key={label}
-                onClick={() => handleNavClick(label)}
+                key={href}
+                onClick={() => handleNavClick(href)}
                 className={`text-left py-1.5 text-sm font-medium transition-colors cursor-pointer ${
-                  isActive(label) ? "text-yellow-400" : "text-gray-300 hover:text-white"
+                  isActive(href) ? "text-yellow-400" : "text-gray-300 hover:text-white"
                 }`}
               >
                 {label}
               </button>
             ) : (
               <a
-                key={label}
+                key={href}
                 href={href}
                 className="text-gray-300 hover:text-white py-1.5 text-sm font-medium transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {label}
               </a>
-            )
-          )}
+            );
+          })}
 
           {/* Mobile locale switcher */}
           <div className="flex gap-3 pt-2 border-t border-white/10 mt-1">

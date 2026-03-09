@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from "react";
 import hero1 from "../../assets/hero1.jpg";
 import hero2 from "../../assets/hero2.jpg";
 import hero3 from "../../assets/hero3.jpg";
+import { useTranslation } from "../../i18n";
 
 interface Slide {
   id: number;
@@ -33,6 +34,7 @@ const AUTOPLAY_INTERVAL = 5000;
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { t } = useTranslation();
 
   const goTo = useCallback(
     (index: number) => {
@@ -59,6 +61,9 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, [goNext]);
 
+   const { badge, title, subtitle, primaryCta, secondaryCta } = t.home.hero;
+
+
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-14 bg-gray-900">
       {/* Background slides — only these rotate */}
@@ -81,17 +86,15 @@ export default function Hero() {
       {/* Static text — never changes between slides */}
       <div className="relative z-20 px-6 max-w-3xl mx-auto">
         <p className="text-sm font-semibold tracking-widest text-yellow-400 uppercase mb-4">
-          Official WCA Organisation
+          {badge}
         </p>
 
         <h1 className="text-5xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-5">
-          Welcome to
-          <br />
-          Speedcubing Belgium
+          {title}
         </h1>
 
         <p className="text-gray-300 text-lg mb-8">
-          Join the fastest growing speedcubing community in Belgium
+          {subtitle}
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
@@ -99,13 +102,13 @@ export default function Hero() {
             href="#competitions"
             className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
-            View Competitions <ArrowRight size={16} />
+            {primaryCta.label} <ArrowRight size={16} />
           </a>
           <a
             href="#records"
             className="flex items-center gap-2 border border-white/40 hover:border-white text-white font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
-            National Records <ArrowRight size={16} />
+            {secondaryCta.label} <ArrowRight size={16} />
           </a>
         </div>
       </div>

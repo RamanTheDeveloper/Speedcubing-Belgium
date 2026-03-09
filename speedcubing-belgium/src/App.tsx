@@ -1,20 +1,23 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/Homepage";
 import AboutPage from "./pages/AboutPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export type Page = "home" | "about";
 
 export default function App() {
-  const [page, setPage] = useState<Page>("home");
 
   return (
-    <div className="font-sans antialiased">
-      <Navbar currentPage={page} onNavigate={setPage} />
-      {page === "home"  && <HomePage />}
-      {page === "about" && <AboutPage />}
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="font-sans antialiased">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
