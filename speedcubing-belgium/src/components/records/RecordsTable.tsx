@@ -26,7 +26,9 @@ export default function RecordsTable() {
       <section className="bg-white py-20 px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-center gap-3 text-red-500">
           <AlertCircle size={20} />
-          <span className="text-sm">Failed to load records. Please try again later.</span>
+          <span className="text-sm">
+            Failed to load records. Please try again later.
+          </span>
         </div>
       </section>
     );
@@ -35,26 +37,24 @@ export default function RecordsTable() {
   return (
     <section className="bg-white py-16 px-6">
       <div className="max-w-5xl mx-auto">
-
         {/* Header + toggle */}
         <div className="flex items-center justify-between gap-4 mb-8 flex-wrap">
           <h2 className="text-2xl font-extrabold text-gray-900">
-            All{" "}
-            <span className="text-yellow-500">National Records</span>
+            All <span className="text-yellow-500">National Records</span>
           </h2>
 
           <div className="flex items-center bg-gray-900 rounded-full p-1 text-sm font-semibold">
-            {(["single", "average"] as Tab[]).map((t) => (
+            {(["single", "average"] as Tab[]).map((type) => (
               <button
-                key={t}
-                onClick={() => setTab(t)}
+                key={type}
+                onClick={() => setTab(type)}
                 className={`px-5 py-1.5 rounded-full transition-colors cursor-pointer ${
-                  tab === t
+                  tab === type
                     ? "bg-white text-gray-900"
                     : "text-gray-400 hover:text-white"
                 }`}
               >
-                {t.charAt(0).toUpperCase() + t.slice(1)}
+                {type.charAt(0).toUpperCase() + type.slice(1)}
               </button>
             ))}
           </div>
@@ -65,43 +65,67 @@ export default function RecordsTable() {
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-gray-900 text-white">
-                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase">Event</th>
-                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase">Time</th>
-                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase">Holder</th>
-                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase hidden md:table-cell">World Rank</th>
+                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase w-32">
+                  Event
+                </th>
+                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase w-24">
+                  Time
+                </th>
+                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase">
+                  Holder
+                </th>
+                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase hidden md:table-cell w-28">
+                  World Rank
+                </th>
+                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase hidden md:table-cell">
+                  Competition
+                </th>
+                <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase hidden md:table-cell w-28">
+                  Date
+                </th>
               </tr>
             </thead>
             <tbody>
               {records.map((record, i) => {
-                const result = tab === "single" ? record.single : record.average;
-                if (!result) return null;
+                const result =
+                  tab === "single" ? record.single : record.average;
 
                 return (
                   <tr
                     key={record.eventId}
-                    className={`border-t border-gray-100 hover:bg-gray-50 transition-colors ${
-                      i % 2 === 0 ? "bg-white" : "bg-gray-50/50"
-                    }`}
+                    className={`border-t border-gray-100 transition-colors ${
+                      result ? "hover:bg-gray-50" : "opacity-40"
+                    } ${i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}
                   >
                     <td className="px-6 py-4 font-semibold text-gray-900">
                       {record.eventLabel}
                     </td>
                     <td className="px-6 py-4 font-extrabold text-yellow-500 text-base">
-                      {result.formatted}
+                      {result?.formatted ?? "—"}
                     </td>
                     <td className="px-6 py-4 text-gray-700">
-                      <a
-                        href={`https://www.worldcubeassociation.org/persons/${result.personId}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-yellow-500 transition-colors inline-flex items-center gap-1.5"
-                      >
-                        {result.personName}
-                        <ExternalLink size={12} className="text-gray-400" />
-                      </a>
+                      {result ? (
+                        <a
+                          href={`https://www.worldcubeassociation.org/persons/${result.personId}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-yellow-500 transition-colors inline-flex items-center gap-1.5 font-semibold"
+                        >
+                          {result.personName}
+                          <ExternalLink size={12} className="text-gray-400" />
+                        </a>
+                      ) : (
+                        "—"
+                      )}
                     </td>
                     <td className="px-6 py-4 text-gray-400 hidden md:table-cell">
-                      #{result.worldRank}
+                      {result ? `#${result.worldRank}` : "—"}
+                    </td>
+                    <td className="px-6 py-4 text-gray-400 text-sm hidden md:table-cell">
+                      {result?.competition ?? "—"}
+                    </td>
+                    <td className="px-6 py-4 text-gray-400 text-sm hidden md:table-cell">
+                      {result?.competitionDate ?? "—"}
                     </td>
                   </tr>
                 );

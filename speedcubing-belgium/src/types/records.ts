@@ -5,7 +5,7 @@ export interface RawRankEntry {
   personName: string;
   personCountry: string;
   eventId: string;
-  best: number;       // time in centiseconds, or move count for FM
+  best: number; // time in centiseconds, or move count for FM
   worldRank: number;
   continentRank: number;
   countryRank: number;
@@ -36,4 +36,6 @@ export interface RecordResult {
   personName: string;
   worldRank: number;
   continentRank: number;
+  competition?: string;
+  competitionDate?: string;
 }
