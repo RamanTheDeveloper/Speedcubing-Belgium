@@ -1,8 +1,9 @@
 import type { NationalRecord, RecordResult } from "../types/records";
 import { formatEventId, ORDERED_EVENT_IDS } from "../utils/EventUtils";
 
-const RAW_BASE     = "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api";
-const CACHE_KEY    = "wca_be_national_records_v8";
+const RAW_BASE =
+  "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api";
+const CACHE_KEY = "wca_be_national_records_v8";
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
@@ -10,8 +11,8 @@ const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 interface RankItem {
   rankType: "single" | "average";
   personId: string;
-  eventId:  string;
-  best:     number;
+  eventId: string;
+  best: number;
   rank: { world: number; continent: number; country: number };
 }
 
@@ -20,29 +21,32 @@ interface RankFile {
 }
 
 interface EventResult {
-  round:   string;
-  best:    number;
+  round: string;
+  best: number;
   average: number;
 }
 
 interface PersonFile {
-  id:      string;
-  name:    string;
+  id: string;
+  name: string;
   results: Record<string, Record<string, EventResult[]>>;
 }
 
 interface CompetitionFile {
-  id:   string;
+  id: string;
   name: string;
   date: {
-    from:  string; // e.g. "2024-03-15"
-    till:  string;
+    from: string; // e.g. "2024-03-15"
+    till: string;
   };
 }
 
 // ─── Cache ─────────────────────────────────────────────────────────────────────
 
-interface CacheEntry<T> { fetchedAt: number; data: T }
+interface CacheEntry<T> {
+  fetchedAt: number;
+  data: T;
+}
 
 function readCache<T>(key: string): T | null {
   try {
@@ -50,37 +54,49 @@ function readCache<T>(key: string): T | null {
     if (!raw) return null;
     const entry: CacheEntry<T> = JSON.parse(raw);
     return Date.now() - entry.fetchedAt > CACHE_TTL_MS ? null : entry.data;
-  } catch { return null; }
+  } catch {
+    return null;
+  }
 }
 
 function writeCache<T>(key: string, data: T): void {
   try {
-    sessionStorage.setItem(key, JSON.stringify({ fetchedAt: Date.now(), data }));
+    sessionStorage.setItem(
+      key,
+      JSON.stringify({ fetchedAt: Date.now(), data }),
+    );
   } catch {}
 }
 
 // ─── Time formatting ───────────────────────────────────────────────────────────
 
-const FM_EVENTS    = new Set(["333fm"]);
+const FM_EVENTS = new Set(["333fm"]);
 const MULTI_EVENTS = new Set(["333mbo", "333mbf"]);
 
-export function formatResult(best: number, eventId: string): string {
-  if (FM_EVENTS.has(eventId)) return String(best);
+export function formatResult(best: number, eventId: string, type: "single" | "average"): string {
+  if (FM_EVENTS.has(eventId)) {
+    if (type === "average") {
+      return (best / 100).toFixed(2);
+    }
+
+    return String(best);
+  }
 
   if (MULTI_EVENTS.has(eventId)) {
-    const missed  = best % 100;
+    const missed = best % 100;
     const seconds = Math.floor((best % 1_000_000) / 100);
-    const solved  = Math.floor((1_000_000_000 - best) / 1_000_000) + missed;
-    const total   = solved + missed;
+    const solved = Math.floor((1_000_000_000 - best) / 1_000_000) + missed;
+    const total = solved + missed;
     const mm = String(Math.floor(seconds / 60)).padStart(2, "0");
     const ss = String(seconds % 60).padStart(2, "0");
     return `${solved}/${total} ${mm}:${ss}`;
   }
 
-  const cs  = best % 100;
+  const cs = best % 100;
   const sec = Math.floor(best / 100) % 60;
   const min = Math.floor(best / 6000);
-  if (min > 0) return `${min}:${String(sec).padStart(2, "0")}.${String(cs).padStart(2, "0")}`;
+  if (min > 0)
+    return `${min}:${String(sec).padStart(2, "0")}.${String(cs).padStart(2, "0")}`;
   return `${sec}.${String(cs).padStart(2, "0")}`;
 }
 
@@ -92,20 +108,22 @@ async function fetchRank1(
 ): Promise<RankItem | null> {
   const res = await fetch(`${RAW_BASE}/rank/BE/${type}/${eventId}.json`);
   if (!res.ok) return null;
-  const data = await res.json() as RankFile;
+  const data = (await res.json()) as RankFile;
   return data.items?.[0] ?? null;
 }
 
 async function fetchPersonData(personId: string): Promise<PersonFile | null> {
   const res = await fetch(`${RAW_BASE}/persons/${personId}.json`);
   if (!res.ok) return null;
-  return await res.json() as PersonFile;
+  return (await res.json()) as PersonFile;
 }
 
-async function fetchCompetitionData(compId: string): Promise<CompetitionFile | null> {
+async function fetchCompetitionData(
+  compId: string,
+): Promise<CompetitionFile | null> {
   const res = await fetch(`${RAW_BASE}/competitions/${compId}.json`);
   if (!res.ok) return null;
-  return await res.json() as CompetitionFile;
+  return (await res.json()) as CompetitionFile;
 }
 
 function findCompetitionId(
@@ -127,9 +145,9 @@ function findCompetitionId(
 
 function formatDate(dateStr: string): string {
   return new Date(dateStr).toLocaleDateString("en-GB", {
-    day:   "numeric",
+    day: "numeric",
     month: "short",
-    year:  "numeric",
+    year: "numeric",
   });
 }
 
@@ -139,27 +157,27 @@ export async function fetchBelgiumNationalRecords(): Promise<NationalRecord[]> {
   const cached = readCache<NationalRecord[]>(CACHE_KEY);
   if (cached) return cached;
 
-  // Step 1: fetch rank-1 for every event
   const [singleResults, averageResults] = await Promise.all([
     Promise.all(ORDERED_EVENT_IDS.map((id) => fetchRank1(id, "single"))),
     Promise.all(ORDERED_EVENT_IDS.map((id) => fetchRank1(id, "average"))),
   ]);
 
-  const singleMap  = new Map<string, RankItem>();
+  const singleMap = new Map<string, RankItem>();
   const averageMap = new Map<string, RankItem>();
   ORDERED_EVENT_IDS.forEach((id, i) => {
-    if (singleResults[i])  singleMap.set(id, singleResults[i]!);
+    if (singleResults[i]) singleMap.set(id, singleResults[i]!);
     if (averageResults[i]) averageMap.set(id, averageResults[i]!);
   });
 
-  // Step 2: fetch person data for all unique NR holders
-  const allPersonIds = [...new Set([
-    ...[...singleMap.values()].map(r => r.personId),
-    ...[...averageMap.values()].map(r => r.personId),
-  ])];
+  const allPersonIds = [
+    ...new Set([
+      ...[...singleMap.values()].map((r) => r.personId),
+      ...[...averageMap.values()].map((r) => r.personId),
+    ]),
+  ];
 
   const personEntries = await Promise.all(
-    allPersonIds.map(async (id) => [id, await fetchPersonData(id)] as const)
+    allPersonIds.map(async (id) => [id, await fetchPersonData(id)] as const),
   );
   const personMap = new Map(personEntries);
 
@@ -186,44 +204,53 @@ export async function fetchBelgiumNationalRecords(): Promise<NationalRecord[]> {
     }
   }
 
-  // Step 4: fetch all unique competition files in parallel
   const compEntries = await Promise.all(
-    [...compIdsToFetch].map(async (id) => [id, await fetchCompetitionData(id)] as const)
+    [...compIdsToFetch].map(
+      async (id) => [id, await fetchCompetitionData(id)] as const,
+    ),
   );
   const compMap = new Map(compEntries);
 
-  // Step 5: assemble records
-  const toResult = (item: RankItem, type: "single" | "average"): RecordResult => {
-    const person  = personMap.get(item.personId);
-    const compId  = recordCompMap.get(`${item.personId}:${item.eventId}:${type}`);
-    const comp    = compId ? compMap.get(compId) : undefined;
+  const toResult = (
+    item: RankItem,
+    type: "single" | "average",
+  ): RecordResult => {
+    const person = personMap.get(item.personId);
+    const compId = recordCompMap.get(
+      `${item.personId}:${item.eventId}:${type}`,
+    );
+    const comp = compId ? compMap.get(compId) : undefined;
     return {
-      best:             item.best,
-      formatted:        formatResult(item.best, item.eventId),
-      personId:         item.personId,
-      personName:       person?.name ?? item.personId,
-      worldRank:        item.rank.world,
-      continentRank:    item.rank.continent,
-      competition:      comp?.name ?? compId,
-      competitionDate:  comp?.date.from ? formatDate(comp.date.from) : undefined,
+      best: item.best,
+      formatted: formatResult(item.best, item.eventId, type),
+      personId: item.personId,
+      personName: person?.name ?? item.personId,
+      worldRank: item.rank.world,
+      continentRank: item.rank.continent,
+      competition: comp?.name ?? compId,
+      competitionDate: comp?.date.from ? formatDate(comp.date.from) : undefined,
     };
   };
 
-  const records = ORDERED_EVENT_IDS
-    .filter((id) => singleMap.has(id) || averageMap.has(id))
-    .map((eventId) => {
-      const s = singleMap.has(eventId)  ? toResult(singleMap.get(eventId)!,  "single")  : null;
-      const a = averageMap.has(eventId) ? toResult(averageMap.get(eventId)!, "average") : null;
-      const primary = s ?? a!;
-      return {
-        eventId,
-        eventLabel: formatEventId(eventId),
-        personId:   primary.personId,
-        personName: primary.personName,
-        single:     s,
-        average:    a,
-      } satisfies NationalRecord;
-    });
+  const records = ORDERED_EVENT_IDS.filter(
+    (id) => singleMap.has(id) || averageMap.has(id),
+  ).map((eventId) => {
+    const s = singleMap.has(eventId)
+      ? toResult(singleMap.get(eventId)!, "single")
+      : null;
+    const a = averageMap.has(eventId)
+      ? toResult(averageMap.get(eventId)!, "average")
+      : null;
+    const primary = s ?? a!;
+    return {
+      eventId,
+      eventLabel: formatEventId(eventId),
+      personId: primary.personId,
+      personName: primary.personName,
+      single: s,
+      average: a,
+    } satisfies NationalRecord;
+  });
 
   writeCache(CACHE_KEY, records);
   return records;
