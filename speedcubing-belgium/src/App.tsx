@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CompetitionsPage from "./pages/CompetitionsPage";
 import RecordsPage from "./pages/RecordsPage";
 import DelegatesPage from "./pages/DelegatesPage";
+import ContactPage from "./pages/ContactPage";
 
 export type Page = "home" | "about" | "competitions";
 
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/competitions" element={<CompetitionsPage />} />
           <Route path="/records" element={<RecordsPage />} />
           <Route path="/delegates" element={<DelegatesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
       </div>

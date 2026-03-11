@@ -6,7 +6,8 @@
       { "label": "About Us", "href": "#about" },
       { "label": "Competitions", "href": "#competitions" },
       { "label": "Records", "href": "#records" },
-      { "label": "Delegates", "href": "#delegates" }
+      { "label": "Delegates", "href": "#delegates" },
+      { "label": "Contact", "href": "#contact" }
     ]
   },
 
