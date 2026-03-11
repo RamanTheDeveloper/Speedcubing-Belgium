@@ -7,11 +7,8 @@ export default function Timeline() {
 
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider">
-            Our Journey
-          </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Our History
+            Our Journey
           </h2>
         </div>
 

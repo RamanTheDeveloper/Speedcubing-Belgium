@@ -7,7 +7,7 @@ interface InvolvedAction {
 }
 
 const ACTIONS: InvolvedAction[] = [
-  { label: "Compete",   href: "#competitions", variant: "dark" },
+  { label: "Compete",   href: "https://www.worldcubeassociation.org/competitions?region=BE", variant: "dark" },
   { label: "Volunteer", href: "#volunteer",    variant: "dark" },
   { label: "Organize",  href: "#organize",     variant: "outline" },
 ];
