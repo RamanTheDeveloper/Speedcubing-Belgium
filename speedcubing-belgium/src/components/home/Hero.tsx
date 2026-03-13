@@ -76,7 +76,7 @@ export default function Hero() {
   const { badge, title, subtitle, primaryCta, secondaryCta } = t.home.hero;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-14 bg-gray-900">
+    <section className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden bg-gray-900">
       {/* Background slides — only these rotate */}
       {SLIDES.map((slide, i) => (
         <div
@@ -94,8 +94,8 @@ export default function Hero() {
       {/* Persistent dark overlay */}
       <div className="absolute inset-0 bg-gray-900/65 z-10" />
 
-      {/* Static text — never changes between slides */}
-      <div className="relative z-20 px-6 max-w-3xl mx-auto">
+      {/* Hero content*/}
+      <div className="relative z-20 px-6 max-w-3xl mx-auto flex-1 flex flex-col justify-center">
         <p className="text-sm font-semibold tracking-widest text-yellow-400 uppercase mb-4">
           {badge}
         </p>
