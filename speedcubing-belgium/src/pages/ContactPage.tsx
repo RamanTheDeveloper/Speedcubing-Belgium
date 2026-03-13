@@ -140,11 +140,8 @@ export default function ContactPage() {
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
         {/* Header */}
         <div className="text-center mb-8">
-          <span className="inline-block bg-gray-900 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
-            Get in Touch
-          </span>
           <h1 className="text-4xl font-extrabold text-gray-900">
-            Contact <span className="text-yellow-500">Us</span>
+            Contact Us
           </h1>
           <p className="text-gray-500 mt-2 text-sm">
             Have a question or want to get involved? We'd love to hear from you.

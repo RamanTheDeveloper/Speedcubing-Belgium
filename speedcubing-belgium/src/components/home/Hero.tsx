@@ -3,6 +3,8 @@ import { useCallback, useEffect, useState } from "react";
 import hero1 from "../../assets/hero1.jpg";
 import hero2 from "../../assets/hero2.jpg";
 import hero3 from "../../assets/hero3.jpg";
+import hero4 from "../../assets/hero4.jpg";
+import hero5 from "../../assets/hero5.jpg";
 import { useTranslation } from "../../i18n";
 
 interface Slide {
@@ -27,6 +29,16 @@ const SLIDES: Slide[] = [
     alt: "Community of speedcubers",
     backgroundImage: `url(${hero3})`,
   },
+    {
+      id: 4,
+      alt: "Speedcuber solving",
+      backgroundImage: `url(${hero4})`,
+    },
+    {
+      id: 5,
+      alt: "Delegate checking solve",
+      backgroundImage: `url(${hero5})`,
+    },
 ];
 
 const AUTOPLAY_INTERVAL = 5000;
