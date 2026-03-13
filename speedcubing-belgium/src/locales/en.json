@@ -277,9 +277,9 @@
       {
         "heading": "Quick Links",
         "links": [
-          { "label": "WCA Competition", "href": "#" },
-          { "label": "Volunteer", "href": "#" },
-          { "label": "Organize a Competition", "href": "#" }
+          { "label": "WCA Competition", "href": "/competitions" },
+          { "label": "Volunteer", "href": "/contact" },
+          { "label": "Organize a Competition", "href": "/contact" }
         ]
       },
       {

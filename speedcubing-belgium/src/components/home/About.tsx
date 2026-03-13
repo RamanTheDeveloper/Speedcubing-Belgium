@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import logo from "../../assets/logo.png";
 import { useTranslation } from "../../i18n";
+import { Link } from "react-router-dom";
 
 export default function AboutSection() {
   const { t } = useTranslation();
@@ -34,12 +35,12 @@ export default function AboutSection() {
           <p className="text-gray-600 text-md leading-relaxed mb-8">
             {about.paragraphs[2]}
           </p>
-          <a
-            href="/about"
+          <Link
+            to="/about"
             className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white font-semibold px-5 py-2.5 rounded transition-colors text-sm"
           >
             {about.cta.label} <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
 
         {/* Logo card — hidden on mobile, visible on desktop */}

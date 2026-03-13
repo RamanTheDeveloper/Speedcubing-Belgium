@@ -1,10 +1,8 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useTranslation } from "../i18n";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-  const developerName = "Grow Easy";
-
   const { t } = useTranslation();
   const footer = t.footer;
 
@@ -37,12 +35,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {links.map(({ label, href }) => (
                 <li key={label}>
-                  <a
-                    href={href}
+                  <Link
+                    to={href}
                     className="text-gray-500 hover:text-gray-300 text-sm transition-colors"
                   >
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

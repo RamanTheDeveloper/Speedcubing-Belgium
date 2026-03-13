@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "../../i18n";
+import { Link } from "react-router-dom";
 
 export default function JoinCTA() {
   const { t } = useTranslation();
@@ -14,12 +15,12 @@ export default function JoinCTA() {
         <p className="text-gray-500 text-base mb-8">
           {cta.subtitle}
         </p>
-        <a
-          href="/competitions"
+        <Link
+          to="/competitions"
           className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white font-semibold px-7 py-3 rounded transition-colors"
         >
           {cta.cta.label} <ArrowRight size={16} />
-        </a>
+        </Link>
       </div>
     </section>
   );

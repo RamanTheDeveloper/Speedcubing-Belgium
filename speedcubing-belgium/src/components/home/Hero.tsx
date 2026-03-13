@@ -6,6 +6,7 @@ import hero3 from "../../assets/hero3.jpg";
 import hero4 from "../../assets/hero4.jpg";
 import hero5 from "../../assets/hero5.jpg";
 import { useTranslation } from "../../i18n";
+import { Link } from "react-router-dom";
 
 interface Slide {
   id: number;
@@ -107,18 +108,18 @@ export default function Hero() {
         <p className="text-gray-300 text-lg mb-8">{subtitle}</p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="/competitions"
+          <Link
+            to="/competitions"
             className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
             {primaryCta.label} <ArrowRight size={16} />
-          </a>
-          <a
-            href="/records"
+          </Link>
+          <Link
+            to="/records"
             className="flex items-center gap-2 border border-white/40 hover:border-white text-white font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
             {secondaryCta.label} <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
       </div>
 

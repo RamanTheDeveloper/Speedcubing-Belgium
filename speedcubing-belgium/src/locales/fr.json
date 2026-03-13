@@ -258,9 +258,9 @@
       {
         "heading": "Liens Rapides",
         "links": [
-          { "label": "Compétition WCA", "href": "#" },
-          { "label": "Bénévole", "href": "#" },
-          { "label": "Organiser une Compétition", "href": "#" }
+          { "label": "Compétition WCA", "href": "/competitions" },
+          { "label": "Bénévole", "href": "/contact" },
+          { "label": "Organiser une Compétition", "href": "/contact" }
         ]
       },
       {

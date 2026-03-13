@@ -258,9 +258,9 @@
       {
         "heading": "Snelle Links",
         "links": [
-          { "label": "WCA Competitie", "href": "#" },
-          { "label": "Vrijwilliger", "href": "#" },
-          { "label": "Organiseer een Competitie", "href": "#" }
+          { "label": "WCA Competitie", "href": "/competitions" },
+          { "label": "Vrijwilliger", "href": "/contact" },
+          { "label": "Organiseer een Competitie", "href": "/contact" }
         ]
       },
       {
