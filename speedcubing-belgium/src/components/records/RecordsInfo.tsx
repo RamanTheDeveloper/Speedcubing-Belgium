@@ -3,15 +3,11 @@ import { useTranslation } from "../../i18n";
 
 export default function RecordsInfo() {
   const { t } = useTranslation();
-  const { badge, title, titleAccent, description, facts } = t.records.info;
+  const { title, titleAccent, description, facts } = t.records.info;
 
   return (
     <section className="bg-gray-950 py-20 px-6">
-      <div className="max-w-3xl mx-auto">
-        <span className="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1.5 rounded mb-6 uppercase tracking-wider">
-          {badge}
-        </span>
-
+      <div className="max-w-3xl mx-auto">        
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
           {title}{" "}
           <span className="text-yellow-400">{titleAccent}</span>

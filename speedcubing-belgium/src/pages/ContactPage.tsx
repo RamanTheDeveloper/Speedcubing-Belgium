@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "../i18n";
 
 // ─── EmailJS config ───────────────────────────────────────────────────────────
 const EMAILJS_SERVICE_ID = "service_dy1ox55";
-const EMAILJS_AUTOREPLY_TEMPLATE_ID = "template_ezlndpk";
 const EMAILJS_NOTIFICATION_TEMPLATE_ID = "template_ngzuedj";
 const EMAILJS_PUBLIC_KEY = "Q7PFNTG5vIi8dsX8_";
 
@@ -33,9 +33,11 @@ interface FormFields {
 
 export default function ContactPage() {
   const loadedAt = useRef(Date.now());
-  const [captcha, setCaptcha] = useState(generateCaptcha);
+  const [captcha, setCaptcha] = useState(generateCaptcha());
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const {t} = useTranslation();
+  const contactForm = t.contact;
 
   const [fields, setFields] = useState<FormFields>({
     name: "",
@@ -90,31 +92,17 @@ export default function ContactPage() {
     setErrorMsg("");
 
     try {
-      await Promise.all([
-        // Auto-reply to the person who submitted
-        emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_AUTOREPLY_TEMPLATE_ID,
-          {
-            name: fields.name,
-            title: fields.subject,
-            email: fields.email,
-          },
-          EMAILJS_PUBLIC_KEY,
-        ),
-        // Notification to your inbox
-        emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_NOTIFICATION_TEMPLATE_ID,
-          {
-            name: fields.name,
-            email: fields.email,
-            title: fields.subject,
-            message: fields.message,
-          },
-          EMAILJS_PUBLIC_KEY,
-        ),
-      ]);
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_NOTIFICATION_TEMPLATE_ID,
+        {
+          name: fields.name,
+          email: fields.email,
+          title: fields.subject,
+          message: fields.message,
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
 
       setStatus("success");
       setFields({
@@ -141,10 +129,10 @@ export default function ContactPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-extrabold text-gray-900">
-            Contact Us
+            {contactForm.title}
           </h1>
           <p className="text-gray-500 mt-2 text-sm">
-            Have a question or want to get involved? We'd love to hear from you.
+            {contactForm.subtitle}
           </p>
         </div>
 
@@ -154,17 +142,16 @@ export default function ContactPage() {
             <div className="flex flex-col items-center gap-4 py-8 text-center">
               <CheckCircle size={48} className="text-yellow-500" />
               <h2 className="text-xl font-extrabold text-gray-900">
-                Message Sent!
+                {contactForm.successTitle}
               </h2>
               <p className="text-gray-500 text-sm">
-                Thanks for reaching out. We'll get back to you as soon as
-                possible.
+                {contactForm.successMsg}
               </p>
               <button
                 onClick={() => setStatus("idle")}
                 className="mt-2 text-sm font-semibold text-gray-600 underline hover:text-gray-900"
               >
-                Send another message
+                {contactForm.cta.label}
               </button>
             </div>
           ) : (
@@ -187,11 +174,11 @@ export default function ContactPage() {
               {/* Name */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-semibold text-gray-700">
-                  Name <span className="text-yellow-500">*</span>
+                  {contactForm.form[0].label} <span className="text-yellow-500">*</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Your name"
+                  placeholder={contactForm.form[0].placeholder}
                   value={fields.name}
                   onChange={set("name")}
                   className="border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition"
@@ -201,11 +188,11 @@ export default function ContactPage() {
               {/* Email */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-semibold text-gray-700">
-                  Email <span className="text-yellow-500">*</span>
+                  {contactForm.form[1].label} <span className="text-yellow-500">*</span>
                 </label>
                 <input
                   type="email"
-                  placeholder="your.email@example.com"
+                  placeholder={contactForm.form[1].placeholder}
                   value={fields.email}
                   onChange={set("email")}
                   className="border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition"
@@ -215,11 +202,11 @@ export default function ContactPage() {
               {/* Subject */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-semibold text-gray-700">
-                  Subject <span className="text-yellow-500">*</span>
+                  {contactForm.form[2].label} <span className="text-yellow-500">*</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="What's this about?"
+                  placeholder={contactForm.form[2].placeholder}
                   value={fields.subject}
                   onChange={set("subject")}
                   className="border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition"
@@ -229,11 +216,11 @@ export default function ContactPage() {
               {/* Message */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-semibold text-gray-700">
-                  Message <span className="text-yellow-500">*</span>
+                  {contactForm.form[3].label} <span className="text-yellow-500">*</span>
                 </label>
                 <textarea
                   rows={5}
-                  placeholder="Tell us more about your inquiry..."
+                  placeholder={contactForm.form[3].placeholder}
                   value={fields.message}
                   onChange={set("message")}
                   className="border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition resize-none"
@@ -243,12 +230,12 @@ export default function ContactPage() {
               {/* Captcha */}
               <div className="flex flex-col gap-1.5">
                 <label className="text-sm font-semibold text-gray-700">
-                  Spam check: what is {captcha.a} + {captcha.b}?{" "}
+                  {contactForm.form[4].label} {captcha.a} + {captcha.b}?{" "}
                   <span className="text-yellow-500">*</span>
                 </label>
                 <input
                   type="number"
-                  placeholder="Your answer"
+                  placeholder={contactForm.form[4].placeholder}
                   value={fields.captcha}
                   onChange={set("captcha")}
                   className="border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition w-36"
@@ -260,7 +247,7 @@ export default function ContactPage() {
                 <div className="flex items-start gap-2 text-red-500 text-sm bg-red-50 border border-red-100 rounded-lg px-4 py-3">
                   <AlertCircle size={16} className="shrink-0 mt-0.5" />
                   <span>
-                    {errorMsg || "Something went wrong. Please try again."}
+                    {errorMsg || contactForm.error.wrong}
                   </span>
                 </div>
               )}
@@ -277,7 +264,7 @@ export default function ContactPage() {
                   </>
                 ) : (
                   <>
-                    <Send size={16} /> Send Message
+                    <Send size={16} /> {contactForm.button.label}
                   </>
                 )}
               </button>
@@ -287,7 +274,7 @@ export default function ContactPage() {
 
         {/* Direct contact */}
         <p className="text-gray-400 text-sm mt-6">
-          Or reach us directly at:{" "}
+          {contactForm.directContact}{" "}
           <a
             href="mailto:info@speedcubingbelgium.be"
             className="text-gray-700 font-semibold hover:text-yellow-500 transition-colors"

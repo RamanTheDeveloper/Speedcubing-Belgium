@@ -1,31 +1,22 @@
 import { ArrowRight } from "lucide-react";
-
-interface InvolvedAction {
-  label: string;
-  href: string;
-  variant: "dark" | "outline";
-}
-
-const ACTIONS: InvolvedAction[] = [
-  { label: "Compete",   href: "/competitions", variant: "dark" },
-  { label: "Volunteer", href: "/contact",    variant: "dark" },
-  { label: "Organize",  href: "/contact",     variant: "outline" },
-];
+import { useTranslation } from "../../i18n";
 
 export default function GetInvolved() {
+  const { t } = useTranslation();
+  const about = t.about;
+
   return (
     <section className="bg-gray-100 py-24 px-6 text-center">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-          Get Involved
+          {about.getInvolved.title}
         </h2>
         <p className="text-gray-500 text-base mb-10">
-          Want to contribute to the Belgian speedcubing community? There are
-          many ways to get involved!
+          {about.getInvolved.subtitle}
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
-          {ACTIONS.map(({ label, href, variant }) => (
+          {about.getInvolved.actions.map(({ label, href, variant }) => (
             <a
               key={label}
               href={href}

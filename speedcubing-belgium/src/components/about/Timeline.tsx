@@ -1,6 +1,10 @@
 import { TIMELINE_EVENTS } from "../../data/aboutData";
+import { useTranslation } from "../../i18n";
 
 export default function Timeline() {
+  const { t } = useTranslation();
+  const about = t.about;
+
   return (
     <section className="bg-white py-20 px-6">
       <div className="max-w-3xl mx-auto">
@@ -8,13 +12,13 @@ export default function Timeline() {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Our Journey
+            {about.timeline.title}
           </h2>
         </div>
 
         {/* Timeline list */}
         <ol className="relative">
-          {TIMELINE_EVENTS.map((event, i) => {
+          {about.timeline.events.map((event, i) => {
             const isLast = i === TIMELINE_EVENTS.length - 1;
             const isZero = i % 3 === 0;
             const isOne = i % 3 === 1;

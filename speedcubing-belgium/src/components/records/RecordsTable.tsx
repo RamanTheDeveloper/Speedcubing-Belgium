@@ -8,6 +8,8 @@ type Tab = "single" | "average";
 export default function RecordsTable() {
   const { records, loading, error } = useRecords();
   const { t } = useTranslation();
+  const record = t.records;
+
   const [tab, setTab] = useState<Tab>("single");
 
   if (loading) {
@@ -15,7 +17,7 @@ export default function RecordsTable() {
       <section className="bg-white py-20 px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-center gap-3 text-gray-500">
           <Loader2 size={20} className="animate-spin" />
-          <span className="text-sm">Loading national records...</span>
+          <span className="text-sm">{}</span>
         </div>
       </section>
     );
@@ -27,7 +29,7 @@ export default function RecordsTable() {
         <div className="max-w-5xl mx-auto flex items-center justify-center gap-3 text-red-500">
           <AlertCircle size={20} />
           <span className="text-sm">
-            Failed to load records. Please try again later.
+            {record.error.failload}
           </span>
         </div>
       </section>
@@ -40,7 +42,7 @@ export default function RecordsTable() {
         {/* Header + toggle */}
         <div className="flex items-center justify-between gap-4 mb-8 flex-wrap">
           <h2 className="text-2xl font-extrabold text-gray-900">
-            All <span className="text-yellow-500">National Records</span>
+            {record.table.title}<span className="text-yellow-500">{record.table.accentTitle}</span>
           </h2>
 
           <div className="flex items-center bg-gray-900 rounded-full p-1 text-sm font-semibold">
@@ -66,22 +68,22 @@ export default function RecordsTable() {
             <thead>
               <tr className="bg-gray-900 text-white">
                 <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase w-32">
-                  Event
+                  {record.table.event}
                 </th>
                 <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase w-24">
-                  Time
+                  {record.table.time}
                 </th>
                 <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase">
-                  Holder
+                  {record.table.holder}
                 </th>
                 <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase hidden md:table-cell w-28">
-                  World Rank
+                  {record.table.worldRank}
                 </th>
                 <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase hidden md:table-cell">
-                  Competition
+                  {record.table.competition}
                 </th>
                 <th className="text-left px-6 py-4 font-semibold tracking-wider text-xs uppercase hidden md:table-cell w-28">
-                  Date
+                  {record.table.date}
                 </th>
               </tr>
             </thead>
@@ -135,16 +137,16 @@ export default function RecordsTable() {
         </div>
 
         <p className="text-xs text-gray-400 mt-4">
-          Data sourced from the{" "}
+          {record.table.disclaimer}
           <a
             href="https://www.worldcubeassociation.org"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-gray-600"
           >
-            World Cube Association
+            {record.table.source}
           </a>
-          , updated daily. Cached for 6 hours.
+          {record.table.disclaimerEnd}
         </p>
       </div>
     </section>

@@ -6,6 +6,7 @@ import { useTranslation } from "../../i18n";
 export default function CompetitionsList() {
   const { upcoming, loading, error } = useCompetitions();
   const { t } = useTranslation();
+  const comp = t.competitions;
 
   if (loading) {
     return (
@@ -23,7 +24,7 @@ export default function CompetitionsList() {
       <section className="bg-gray-50 py-20 px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-center gap-3 text-red-500">
           <AlertCircle size={20} />
-          <span className="text-sm">Failed to load competitions. Please try again later.</span>
+          <span className="text-sm">{comp.error.failload}</span>
         </div>
       </section>
     );
@@ -36,18 +37,18 @@ export default function CompetitionsList() {
         {/* Section header */}
         <div className="mb-8">
           <h2 className="text-2xl font-extrabold text-gray-900">
-            {t.competitions.upcoming.title}
+            {comp.upcoming.title}
           </h2>
           <p className="text-gray-500 text-sm mt-1">
             {upcoming.length > 0
               ? `${upcoming.length} competition${upcoming.length !== 1 ? "s" : ""} scheduled`
-              : t.competitions.upcoming.empty}
+              : comp.upcoming.empty}
           </p>
         </div>
 
         {upcoming.length === 0 ? (
           <div className="text-center py-16 text-gray-400 text-sm">
-            {t.competitions.upcoming.empty}
+            {comp.upcoming.empty}
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

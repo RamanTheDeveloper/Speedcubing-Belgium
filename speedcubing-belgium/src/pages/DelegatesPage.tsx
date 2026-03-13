@@ -7,6 +7,7 @@ import claraImg from "../assets/delegates/clara.jpg";
 import theoImg from "../assets/delegates/theo.jpg";
 import ramandeepImg from "../assets/delegates/ramandeep.jpg";
 import matthiasImg from "../assets/delegates/matthias.jpg";
+import { useTranslation } from "../i18n";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -135,6 +136,7 @@ function Avatar({
 // ─── Junior delegate card ─────────────────────────────────────────────────────
 
 function JuniorDelegateCard({ delegate }: { delegate: Delegate }) {
+  const { t } = useTranslation();
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col gap-4">
       <div className="flex flex-col items-center justify-center text-center gap-4">
@@ -145,7 +147,9 @@ function JuniorDelegateCard({ delegate }: { delegate: Delegate }) {
           </p>
           <RoleBadge role={delegate.role} />
           <p className="text-xs text-gray-400 mt-1">
-            Region: {delegate.region}
+            {delegate.id !== "junior-1"
+              ? `${t.delegates.roles.role.region}`
+              : `${t.delegates.roles.role.region2}` }
           </p>
         </div>
       </div>
@@ -167,7 +171,7 @@ function JuniorDelegateCard({ delegate }: { delegate: Delegate }) {
           className="flex items-center justify-center gap-2 text-sm font-semibold bg-gray-900 text-white rounded-lg py-2 hover:bg-gray-700 transition-colors"
         >
           <ExternalLink size={14} />
-          WCA Profile
+          {t.delegates.roles.role.profile}
         </a>
       </div>
     </div>
@@ -177,6 +181,7 @@ function JuniorDelegateCard({ delegate }: { delegate: Delegate }) {
 // ─── Trainee delegate card ────────────────────────────────────────────────────
 
 function TraineeDelegateCard({ delegate }: { delegate: Delegate }) {
+  const { t } = useTranslation();
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col gap-4">
       <div className="flex flex-col items-center text-center gap-4">
@@ -185,7 +190,7 @@ function TraineeDelegateCard({ delegate }: { delegate: Delegate }) {
           <p className="font-extrabold text-gray-900 text-lg">{delegate.name}</p>
           <RoleBadge role={delegate.role} />
           <p className="text-xs text-gray-400 mt-1">
-            Region: {delegate.region}
+            {t.delegates.roles.role.region}
           </p>
         </div>
       </div>
@@ -207,7 +212,7 @@ function TraineeDelegateCard({ delegate }: { delegate: Delegate }) {
           className="flex items-center justify-center gap-2 text-sm font-semibold bg-gray-900 text-white rounded-lg py-2 hover:bg-gray-700 transition-colors"
         >
           <ExternalLink size={14} />
-          WCA Profile
+          {t.delegates.roles.role.profile}
         </a>
       </div>
     </div>
@@ -217,17 +222,18 @@ function TraineeDelegateCard({ delegate }: { delegate: Delegate }) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function DelegatesPage() {
+  const { t } = useTranslation();
+  const delegates = t.delegates;
   return (
     <div className="bg-white min-h-screen">
       {/* Hero */}
       <section className="bg-gray-950 pt-28 pb-16 px-6">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
-            Delegates
+            {delegates.hero.title}
           </h1>
           <p className="text-gray-400 text-base max-w-lg leading-relaxed">
-            Meet the WCA delegates who ensure the quality and fairness of
-            speedcubing competitions in Belgium.
+            {delegates.hero.subtitle}
           </p>
         </div>
       </section>
@@ -235,21 +241,13 @@ export default function DelegatesPage() {
       {/* What is a WCA Delegate */}
       <section className="px-6 pb-16 max-w-5xl mx-auto mt-10">
         <h2 className="text-3xl font-extrabold text-gray-900 mt-4 mb-3">
-          What is a WCA Delegate?
+          {delegates.info.title}
         </h2>
         <p className="text-gray-600 text-md leading-relaxed mb-4">
-          WCA Delegates are officials appointed by the World Cube Association to
-          oversee competitions and ensure they follow WCA regulations. They are
-          responsible for:
+          {delegates.info.description}
         </p>
         <ul className="space-y-2">
-          {[
-            "Verifying that competitions meet all WCA standards and regulations",
-            "Resolving incidents and ensuring fair play during competitions",
-            "Approving and uploading official results to the WCA database",
-            "Training judges, scramblers, and organizers on proper procedures",
-            "Supporting competition organizers with planning and logistics",
-          ].map((item) => (
+          {delegates.info.responsibilities.map((item) => (
             <li
               key={item}
               className="flex items-start gap-3 text-md text-gray-600"
@@ -264,7 +262,7 @@ export default function DelegatesPage() {
       {/* Team header */}
       <section className="px-6 py-4 max-w-5xl mx-auto text-center">
         <h2 className="text-3xl font-extrabold text-gray-900">
-          Our Delegate Team
+          {delegates.roles.heading}
         </h2>
       </section>
 
@@ -272,7 +270,7 @@ export default function DelegatesPage() {
       <section className="px-6 py-10 max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
           <h3 className="text-lg font-extrabold text-gray-900">
-            Junior Delegates
+            {delegates.roles.role.junior}
           </h3>
           <div className="flex-1 h-px bg-yellow-400" />
         </div>
@@ -287,7 +285,7 @@ export default function DelegatesPage() {
       <section className="px-6 py-10 max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
           <h3 className="text-lg font-extrabold text-gray-900">
-            Trainee Delegates
+            {delegates.roles.role.trainee}
           </h3>
           <div className="flex-1 h-px bg-gray-200" />
         </div>
