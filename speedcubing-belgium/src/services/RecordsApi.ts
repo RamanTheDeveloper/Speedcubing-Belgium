@@ -1,5 +1,5 @@
 import type { NationalRecord, RecordResult } from "../types/records";
-import { formatEventId, ORDERED_EVENT_IDS } from "../utils/EventUtils";
+import { formatEventId, ORDERED_EVENT_IDS } from "../utils/eventUtils";
 
 const RAW_BASE =
   "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api";
