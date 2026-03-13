@@ -3,6 +3,9 @@ import { useCallback, useEffect, useState } from "react";
 import hero1 from "../../assets/hero1.jpg";
 import hero2 from "../../assets/hero2.jpg";
 import hero3 from "../../assets/hero3.jpg";
+import hero4 from "../../assets/hero4.jpg";
+import hero5 from "../../assets/hero5.jpg";
+import { useTranslation } from "../../i18n";
 
 interface Slide {
   id: number;
@@ -26,6 +29,16 @@ const SLIDES: Slide[] = [
     alt: "Community of speedcubers",
     backgroundImage: `url(${hero3})`,
   },
+  {
+    id: 4,
+    alt: "Speedcuber solving",
+    backgroundImage: `url(${hero4})`,
+  },
+  {
+    id: 5,
+    alt: "Delegate checking solve",
+    backgroundImage: `url(${hero5})`,
+  },
 ];
 
 const AUTOPLAY_INTERVAL = 5000;
@@ -33,6 +46,7 @@ const AUTOPLAY_INTERVAL = 5000;
 export default function Hero() {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const { t } = useTranslation();
 
   const goTo = useCallback(
     (index: number) => {
@@ -59,6 +73,8 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, [goNext]);
 
+  const { badge, title, subtitle, primaryCta, secondaryCta } = t.home.hero;
+
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-14 bg-gray-900">
       {/* Background slides — only these rotate */}
@@ -81,31 +97,27 @@ export default function Hero() {
       {/* Static text — never changes between slides */}
       <div className="relative z-20 px-6 max-w-3xl mx-auto">
         <p className="text-sm font-semibold tracking-widest text-yellow-400 uppercase mb-4">
-          Official WCA Organisation
+          {badge}
         </p>
 
         <h1 className="text-5xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-5">
-          Welcome to
-          <br />
-          Speedcubing Belgium
+          {title}
         </h1>
 
-        <p className="text-gray-300 text-lg mb-8">
-          Join the fastest growing speedcubing community in Belgium
-        </p>
+        <p className="text-gray-300 text-lg mb-8">{subtitle}</p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
-            href="#competitions"
+            href="/competitions"
             className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
-            View Competitions <ArrowRight size={16} />
+            {primaryCta.label} <ArrowRight size={16} />
           </a>
           <a
-            href="#records"
+            href="/records"
             className="flex items-center gap-2 border border-white/40 hover:border-white text-white font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
-            National Records <ArrowRight size={16} />
+            {secondaryCta.label} <ArrowRight size={16} />
           </a>
         </div>
       </div>
@@ -114,7 +126,7 @@ export default function Hero() {
       <button
         onClick={goPrev}
         aria-label="Previous slide"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors cursor-pointer"
+        className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 items-center justify-center text-white transition-colors cursor-pointer"
       >
         <ChevronLeft size={20} />
       </button>
@@ -123,7 +135,7 @@ export default function Hero() {
       <button
         onClick={goNext}
         aria-label="Next slide"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-colors cursor-pointer"
+        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 items-center justify-center text-white transition-colors cursor-pointer"
       >
         <ChevronRight size={20} />
       </button>
@@ -142,6 +154,18 @@ export default function Hero() {
             }`}
           />
         ))}
+      </div>
+
+      {/* Photo credit */}
+      <div className="absolute bottom-2 md:bottom-4 right-4 z-30">
+        <a
+          href="https://irenedriessen.smugmug.com/Speedcubing/Hasselt-Sunday-Open-2025"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/40 hover:text-white/70 text-[10px] md:text-xs transition-colors"
+        >
+          © Photos by Irene Driessen
+        </a>
       </div>
 
       {/* Progress bar */}
