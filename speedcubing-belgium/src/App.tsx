@@ -8,6 +8,7 @@ import RecordsPage from "./pages/RecordsPage";
 import DelegatesPage from "./pages/DelegatesPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 
 export type Page = "home" | "about" | "competitions";
 
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
+        <CookieBanner />
       </div>
     </BrowserRouter>
   );
