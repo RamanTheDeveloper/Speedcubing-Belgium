@@ -39,6 +39,7 @@ export default function Navbar() {
   const handleLocaleChange = (code: Locale) => {
     changeLocale(code);
     setLocaleOpen(false);
+    setMobileOpen(false);
   };
 
   const isActive = (href: string): boolean => {
