@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Cookie, X, ChevronDown, ChevronUp, ShieldCheck, BarChart2 } from "lucide-react";
 import {
   getConsentCookie,
+  grantAnalyticsConsent,
   setConsentCookie,
   setLangCookie,
 } from "../utils/Cookies";
@@ -31,8 +32,7 @@ export default function CookieBanner() {
   function handleAcceptAll() {
     setConsentCookie("accepted");
     setLangCookie(locale);
-    // TODO: initialise Google Analytics here, e.g.:
-    // gtag('consent', 'update', { analytics_storage: 'granted' })
+    grantAnalyticsConsent();
     setVisible(false);
   }
 

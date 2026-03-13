@@ -9,10 +9,19 @@ import DelegatesPage from "./pages/DelegatesPage";
 import ContactPage from "./pages/ContactPage";
 import ScrollToTop from "./ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
+import { useEffect } from "react";
+import { getConsentCookie, grantAnalyticsConsent } from "./utils/Cookies";
 
 export type Page = "home" | "about" | "competitions";
 
+
 export default function App() {
+  useEffect(() => {
+      if (getConsentCookie() === "accepted") {
+        grantAnalyticsConsent();
+      }
+    }, []);
+    
   return (
     <BrowserRouter>
     <ScrollToTop />

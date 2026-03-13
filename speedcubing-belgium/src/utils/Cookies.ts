@@ -1,5 +1,12 @@
 // ─── Cookie utilities ─────────────────────────────────────────────────────────
 
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
+  }
+}
+
 const LANG_COOKIE = "preferred_lang";
 const CONSENT_COOKIE = "cookie_consent";
 const COOKIE_MAX_AGE = 365 * 24 * 60 * 60; // 1 year in seconds
@@ -41,4 +48,16 @@ export function setConsentCookie(state: "accepted" | "declined") {
   // If declined, only store the consent choice itself (minimal cookie)
   // The language preference cookie is set separately only when accepted
   setCookie(CONSENT_COOKIE, state);
+}
+
+export function grantAnalyticsConsent() {
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "update", { analytics_storage: "granted" });
+  }
+}
+
+export function revokeAnalyticsConsent() {
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "update", { analytics_storage: "denied" });
+  }
 }
