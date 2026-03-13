@@ -4,10 +4,6 @@ export default function WhatWeDoSection() {
   return (
     <section className="bg-gray-900 py-20">
       <div className="max-w-5xl mx-auto px-6 text-center">
-
-        <span className="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded mb-4 uppercase tracking-wider">
-          Our Mission
-        </span>
         <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-12">
           What We Do
         </h2>

@@ -17,9 +17,6 @@ export default function AboutSection() {
 
         {/* Text content */}
         <div className="flex-1">
-          <span className="inline-block bg-yellow-400 text-gray-900 text-xs font-bold px-3 py-1 rounded mb-4 uppercase tracking-wider">
-            Who We Are
-          </span>
 
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">
             What is

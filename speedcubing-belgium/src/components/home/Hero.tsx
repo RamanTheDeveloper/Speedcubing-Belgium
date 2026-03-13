@@ -29,16 +29,16 @@ const SLIDES: Slide[] = [
     alt: "Community of speedcubers",
     backgroundImage: `url(${hero3})`,
   },
-    {
-      id: 4,
-      alt: "Speedcuber solving",
-      backgroundImage: `url(${hero4})`,
-    },
-    {
-      id: 5,
-      alt: "Delegate checking solve",
-      backgroundImage: `url(${hero5})`,
-    },
+  {
+    id: 4,
+    alt: "Speedcuber solving",
+    backgroundImage: `url(${hero4})`,
+  },
+  {
+    id: 5,
+    alt: "Delegate checking solve",
+    backgroundImage: `url(${hero5})`,
+  },
 ];
 
 const AUTOPLAY_INTERVAL = 5000;
@@ -73,8 +73,7 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, [goNext]);
 
-   const { badge, title, subtitle, primaryCta, secondaryCta } = t.home.hero;
-
+  const { badge, title, subtitle, primaryCta, secondaryCta } = t.home.hero;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-14 bg-gray-900">
@@ -105,9 +104,7 @@ export default function Hero() {
           {title}
         </h1>
 
-        <p className="text-gray-300 text-lg mb-8">
-          {subtitle}
-        </p>
+        <p className="text-gray-300 text-lg mb-8">{subtitle}</p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
@@ -157,6 +154,18 @@ export default function Hero() {
             }`}
           />
         ))}
+      </div>
+
+      {/* Photo credit */}
+      <div className="absolute bottom-2 md:bottom-4 right-4 z-30">
+        <a
+          href="https://irenedriessen.smugmug.com/Speedcubing/Hasselt-Sunday-Open-2025"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white/40 hover:text-white/70 text-[10px] md:text-xs transition-colors"
+        >
+          © Photos by Irene Driessen
+        </a>
       </div>
 
       {/* Progress bar */}
