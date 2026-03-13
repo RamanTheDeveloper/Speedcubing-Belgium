@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "../../i18n";
+import { Link } from "react-router-dom";
 
 export default function GetInvolved() {
   const { t } = useTranslation();
@@ -17,9 +18,9 @@ export default function GetInvolved() {
 
         <div className="flex flex-wrap justify-center gap-4">
           {about.getInvolved.actions.map(({ label, href, variant }) => (
-            <a
+            <Link
               key={label}
-              href={href}
+              to={href}
               className={`inline-flex items-center gap-2 font-semibold px-6 py-3 rounded-full transition-colors text-sm ${
                 variant === "dark"
                   ? "bg-gray-900 hover:bg-gray-700 text-white"
@@ -27,7 +28,7 @@ export default function GetInvolved() {
               }`}
             >
               {label} <ArrowRight size={16} />
-            </a>
+            </Link>
           ))}
         </div>
       </div>
