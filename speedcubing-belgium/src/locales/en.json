@@ -21,12 +21,11 @@
     },
     "stats": [
       { "value": "500+", "label": "Active Cubers" },
-      { "value": "50+", "label": "Competitions to Date" },
-      { "value": "15+", "label": "Official Events" },
-      { "value": "14", "label": "Years Active" }
+      { "value": "100+", "label": "Competitions to Date" },
+      { "value": "13+", "label": "Official Events" },
+      { "value": "7", "label": "Years Active" }
     ],
     "about": {
-      "badge": "Who We Are",
       "title": "What is\nSpeedcubing Belgium?",
       "paragraphs": [
         "Speedcubing Belgium (SCB) is the official representative organization for speedcubing in Belgium, working in close collaboration with the World Cube Association (WCA).",
@@ -35,8 +34,7 @@
       ],
       "cta": { "label": "Learn More About Us", "href": "#about" }
     },
-    "services": {
-      "badge": "Our Mission",
+    "whatWeDo": {
       "title": "What We Do",
       "items": [
         {
@@ -47,12 +45,12 @@
         {
           "icon": "Star",
           "title": "Promote Speedcubing",
-          "description": "We work to raise awareness about speedcubing through demonstrations, workshops, and community outreach."
+          "description": "We work to raise awareness about speedcubing through competitions, social media presence and community outreach."
         },
         {
           "icon": "Users",
           "title": "Build Community",
-          "description": "We foster a welcoming community where cubers can meet, share techniques, and support each other's growth."
+          "description": "We foster a welcoming community where cubers can compete, meet, share techniques and support each other's growth."
         }
       ]
     },
@@ -179,7 +177,7 @@
         "heading": "Quick Links",
         "links": [
           { "label": "WCA Competition", "href": "#" },
-          { "label": "Become a Member", "href": "#" },
+          { "label": "Volunteer", "href": "#" },
           { "label": "Organize a Competition", "href": "#" }
         ]
       },
@@ -193,6 +191,18 @@
         ]
       }
     ],
-    "copyright": "Speedcubing Belgium. All rights reserved."
+    "copyright": {
+      "icon" : "© ",
+      "text": "Speedcubing Belgium. Made by ",
+      "rights": ". All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
+    },
+    "social": {
+      "links": [
+        { "icon": "Facebook", "href": "#" },
+        { "icon": "Instagram", "href": "#" }
+      ]
+    }
   }
 }

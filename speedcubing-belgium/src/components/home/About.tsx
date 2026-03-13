@@ -1,7 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import logo from "../../assets/logo.png";
+import { useTranslation } from "../../i18n";
 
 export default function AboutSection() {
+  const { t } = useTranslation();
+  const about = t.home.about;
+
   return (
     <section id="about" className="bg-white py-20">
       <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
@@ -17,34 +21,24 @@ export default function AboutSection() {
 
         {/* Text content */}
         <div className="flex-1">
-
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">
-            What is
-            <br />
-            Speedcubing Belgium?
+            {about.title}
           </h2>
 
           <p className="text-gray-600 text-md leading-relaxed mb-4">
-            Speedcubing Belgium (SCB) is the official representative
-            organization for speedcubing in Belgium, working in close
-            collaboration with the World Cube Association (WCA).
+            {about.paragraphs[0]}
           </p>
           <p className="text-gray-600 text-md leading-relaxed mb-4">
-            We organize and oversee official speedcubing competitions throughout
-            Belgium, where cubers of all skill levels compete to solve various
-            twisty puzzles as fast as possible.
+            {about.paragraphs[1]}
           </p>
           <p className="text-gray-600 text-md leading-relaxed mb-8">
-            Whether you're a beginner who just learned to solve a Rubik's Cube
-            or an experienced speedcuber chasing national records, SCB provides
-            a welcoming community and competitive platform for all.
+            {about.paragraphs[2]}
           </p>
-
           <a
             href="/about"
             className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white font-semibold px-5 py-2.5 rounded transition-colors text-sm"
           >
-            Learn More About Us <ArrowRight size={16} />
+            {about.cta.label} <ArrowRight size={16} />
           </a>
         </div>
 
