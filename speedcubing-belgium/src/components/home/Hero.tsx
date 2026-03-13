@@ -111,13 +111,13 @@ export default function Hero() {
 
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
-            href="#competitions"
+            href="/competitions"
             className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
             {primaryCta.label} <ArrowRight size={16} />
           </a>
           <a
-            href="#records"
+            href="/records"
             className="flex items-center gap-2 border border-white/40 hover:border-white text-white font-semibold px-6 py-2.5 rounded transition-colors text-sm"
           >
             {secondaryCta.label} <ArrowRight size={16} />

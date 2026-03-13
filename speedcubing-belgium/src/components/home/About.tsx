@@ -44,7 +44,7 @@ export default function AboutSection() {
           </p>
 
           <a
-            href="#about"
+            href="/about"
             className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white font-semibold px-5 py-2.5 rounded transition-colors text-sm"
           >
             Learn More About Us <ArrowRight size={16} />

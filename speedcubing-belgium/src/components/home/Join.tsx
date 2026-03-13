@@ -12,7 +12,7 @@ export default function JoinCTA() {
           speedcubing scene!
         </p>
         <a
-          href="#competitions"
+          href="/competitions"
           className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white font-semibold px-7 py-3 rounded transition-colors"
         >
           View Upcoming Events <ArrowRight size={16} />
