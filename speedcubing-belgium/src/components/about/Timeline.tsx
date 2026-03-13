@@ -1,4 +1,3 @@
-import { TIMELINE_EVENTS } from "../../data/aboutData";
 import { useTranslation } from "../../i18n";
 
 export default function Timeline() {
@@ -19,7 +18,7 @@ export default function Timeline() {
         {/* Timeline list */}
         <ol className="relative">
           {about.timeline.events.map((event, i) => {
-            const isLast = i === TIMELINE_EVENTS.length - 1;
+            const isLast = i === about.timeline.events.length - 1;
             const isZero = i % 3 === 0;
             const isOne = i % 3 === 1;
 
