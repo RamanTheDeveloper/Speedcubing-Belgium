@@ -15,7 +15,7 @@
     "hero": {
       "badge": "Official WCA Organisation",
       "title": "Welcome to\nSpeedcubing Belgium",
-      "subtitle": "Join the fastest growing puzzle sport in Belgium",
+      "subtitle": "Join the fastest growing speedcubing community in Belgium",
       "primaryCta": { "label": "View Competitions", "href": "#competitions" },
       "secondaryCta": { "label": "National Records", "href": "#records" }
     },

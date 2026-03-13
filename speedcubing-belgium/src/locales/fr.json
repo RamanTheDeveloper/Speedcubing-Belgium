@@ -2,238 +2,286 @@
   "nav": {
     "brand": "Speedcubing Belgium",
     "links": [
-      {
-        "label": "Accueil",
-        "href": "#"
-      },
-      {
-        "label": "À propos",
-        "href": "#about"
-      },
-      {
-        "label": "Compétitions",
-        "href": "#competitions"
-      },
-      {
-        "label": "Records",
-        "href": "#records"
-      },
-      {
-        "label": "Délégués",
-        "href": "#delegates"
-      }
+      { "label": "Accueil", "href": "#" },
+      { "label": "À Propos", "href": "#about" },
+      { "label": "Compétitions", "href": "#competitions" },
+      { "label": "Records", "href": "#records" },
+      { "label": "Delegates", "href": "#delegates" },
+      { "label": "Contact", "href": "#contact" }
     ]
   },
+
   "home": {
     "hero": {
-      "badge": "Organisation officielle WCA",
-      "title": "Bienvenue chez\nSpeedcubing Belgium",
-      "subtitle": "Rejoignez le sport de puzzle qui grandit le plus vite en Belgique",
-      "primaryCta": {
-        "label": "Voir les compétitions",
-        "href": "#competitions"
-      },
-      "secondaryCta": {
-        "label": "Records nationaux",
-        "href": "#records"
-      }
+      "badge": "Organisation WCA Officielle",
+      "title": "Bienvenue à\nSpeedcubing Belgium",
+      "subtitle": "Rejoignez la communauté de speedcubing à la croissance la plus rapide en Belgique",
+      "primaryCta": { "label": "Voir les Compétitions", "href": "#competitions" },
+      "secondaryCta": { "label": "Records Nationaux", "href": "#records" }
     },
     "stats": [
-      {
-        "value": "500+",
-        "label": "Cubeurs actifs"
-      },
-      {
-        "value": "50+",
-        "label": "Compétitions à ce jour"
-      },
-      {
-        "value": "15+",
-        "label": "Épreuves officielles"
-      },
-      {
-        "value": "14",
-        "label": "Ans d'activité"
-      }
+      { "value": "500+", "label": "Cubers Actifs" },
+      { "value": "100+", "label": "Compétitions à ce jour" },
+      { "value": "13+", "label": "Événements Officiels" },
+      { "value": "7", "label": "Années d'Activité" }
     ],
     "about": {
-      "badge": "Qui nous sommes",
-      "title": "Qu'est-ce que\nSpeedcubing Belgium ?",
+      "title": "Qu'est-ce que\nSpeedcubing Belgium?",
       "paragraphs": [
         "Speedcubing Belgium (SCB) est l'organisation représentative officielle du speedcubing en Belgique, travaillant en étroite collaboration avec la World Cube Association (WCA).",
-        "Nous organisons et supervisons des compétitions officielles de speedcubing dans toute la Belgique, où des cubeurs de tous niveaux s'affrontent pour résoudre divers casse-têtes le plus rapidement possible.",
-        "Que vous soyez débutant et que vous venez d'apprendre à résoudre un Rubik's Cube, ou un speedcuber expérimenté visant des records nationaux, SCB offre une communauté accueillante et une plateforme compétitive pour tous."
+        "Nous organisons et supervisons des compétitions officielles de speedcubing à travers la Belgique, où des cubers de tous niveaux s'affrontent pour résoudre différents puzzles le plus rapidement possible.",
+        "Que vous soyez débutant et que vous veniez d'apprendre à résoudre un Rubik's Cube ou un speedcuber expérimenté à la recherche de records nationaux, SCB offre une communauté accueillante et une plateforme compétitive pour tous."
       ],
-      "cta": {
-        "label": "En savoir plus",
-        "href": "#about"
-      }
+      "cta": { "label": "En Savoir Plus Sur Nous", "href": "#about" }
     },
-    "services": {
-      "badge": "Notre mission",
-      "title": "Ce que nous faisons",
+    "whatWeDo": {
+      "title": "Ce que Nous Faisons",
       "items": [
         {
           "icon": "Trophy",
-          "title": "Organiser des compétitions",
-          "description": "Nous organisons des compétitions WCA officielles à travers la Belgique, garantissant fair-play et gestion professionnelle des événements."
+          "title": "Organiser des Compétitions",
+          "description": "Nous organisons des compétitions WCA officielles en Belgique, garantissant un jeu équitable et une gestion professionnelle des événements."
         },
         {
           "icon": "Star",
-          "title": "Promouvoir le speedcubing",
-          "description": "Nous travaillons à sensibiliser le public au speedcubing grâce à des démonstrations, des ateliers et des actions communautaires."
+          "title": "Promouvoir le Speedcubing",
+          "description": "Nous sensibilisons le public au speedcubing grâce aux compétitions, à notre présence sur les réseaux sociaux et aux actions communautaires."
         },
         {
           "icon": "Users",
-          "title": "Construire une communauté",
-          "description": "Nous favorisons une communauté accueillante où les cubeurs peuvent se rencontrer, partager des techniques et se soutenir mutuellement."
+          "title": "Créer une Communauté",
+          "description": "Nous favorisons une communauté accueillante où les cubers peuvent concourir, se rencontrer, partager des techniques et soutenir la progression des autres."
         }
       ]
     },
     "joinCta": {
       "title": "Prêt à nous rejoindre ?",
-      "subtitle": "Découvrez nos prochaines compétitions et devenez membre de la scène speedcubing belge !",
-      "cta": {
-        "label": "Voir les prochains événements",
-        "href": "#competitions"
-      }
+      "subtitle": "Découvrez nos prochaines compétitions et faites partie de la scène belge du speedcubing !",
+      "cta": { "label": "Voir les Événements à Venir", "href": "#competitions" }
     }
   },
+
   "about": {
     "hero": {
-      "title": "À propos",
-      "subtitle": "Apprenez-en plus sur Speedcubing Belgium et notre mission de promouvoir le cubing compétitif à travers le pays."
+      "title": "À Propos",
+      "subtitle": "En savoir plus sur Speedcubing Belgium et notre mission de promouvoir le cubing compétitif à travers le pays."
     },
     "timeline": {
-      "badge": "Notre parcours",
-      "title": "Notre",
-      "titleAccent": "chronologie",
+      "title": "Notre Parcours",
       "events": [
         {
-          "year": "2009",
-          "shortYear": "09",
-          "title": "Les débuts",
-          "description": "Speedcubing Belgium a été fondé par des cubeurs passionnés qui souhaitaient créer une structure organisée pour le cubing compétitif en Belgique."
-        },
-        {
-          "year": "2010",
+          "year": "Début des années 2010",
           "shortYear": "10",
-          "title": "Première grande compétition",
-          "description": "Nous avons organisé notre première compétition WCA à grande échelle, réunissant des cubeurs de tout le pays."
+          "title": "Le Speedcubing Arrive en Belgique",
+          "description": "Inspirés par la scène internationale de speedcubing en pleine croissance, les premiers cubers belges ont commencé à se rencontrer et à organiser de petites compétitions. Ces premiers événements ont jeté les bases d'une communauté nationale de cubing."
         },
         {
-          "year": "2014",
-          "shortYear": "14",
-          "title": "Croissance de la communauté",
-          "description": "Notre communauté s'est considérablement développée, avec de nouveaux délégués et davantage de compétitions organisées à l'échelle nationale."
+          "year": "Milieu des années 2010",
+          "shortYear": "15",
+          "title": "Les Premières Compétitions Belges",
+          "description": "La Belgique a commencé à accueillir des compétitions WCA officielles, rassemblant des cubers de tout le pays et connectant la communauté belge à la scène internationale de speedcubing."
         },
         {
           "year": "2018",
           "shortYear": "18",
-          "title": "Année de records",
-          "description": "Les cubeurs belges ont établi plusieurs records nationaux, plaçant la Belgique sur la carte de la scène internationale du speedcubing."
+          "title": "Organisation Communautaire",
+          "description": "Après plusieurs compétitions locales organisées par des bénévoles, la communauté belge de cubing est devenue plus structurée. Des organisateurs et delegates dédiés ont aidé à assurer la croissance continue des compétitions."
         },
         {
-          "year": "2023",
-          "shortYear": "23",
-          "title": "Élargissement des horizons",
-          "description": "Nous avons introduit de nouveaux formats d'épreuves et étendu notre portée aux régions moins représentées en Belgique."
+          "year": "2019",
+          "shortYear": "19",
+          "title": "Croissance Constante",
+          "description": "La Belgique a accueilli cinq compétitions WCA en une seule année, montrant la popularité croissante du speedcubing et la force de la communauté nationale."
         },
         {
-          "year": "2026",
-          "shortYear": "26",
-          "title": "Aujourd'hui",
-          "description": "Nous servons fièrement des centaines de compétiteurs actifs et continuons à faire grandir la communauté belge du speedcubing."
+          "year": "2020–2021",
+          "shortYear": "20",
+          "title": "Pause Pandémique",
+          "description": "La pandémie de COVID-19 a temporairement interrompu les compétitions, mais la communauté est restée active et prête à revenir aux événements dès que possible."
+        },
+        {
+          "year": "2022",
+          "shortYear": "22",
+          "title": "Une Nouvelle Ère de Grandes Compétitions",
+          "description": "Après la pandémie, l'intérêt pour le speedcubing a explosé. Les compétitions sont devenues plus grandes que jamais, avec des événements accueillant jusqu'à 181 participants et nécessitant une équipe organisatrice plus importante."
+        },
+        {
+          "year": "Aujourd'hui",
+          "shortYear": "Now",
+          "title": "Speedcubing Belgium",
+          "description": "Speedcubing Belgium soutient désormais une communauté croissante de cubers et d'organisateurs, organise des compétitions dans tout le pays et continue d'élargir la scène belge du speedcubing."
         }
       ]
     },
     "mission": {
-      "badge": "Notre mission",
-      "title": "Promouvoir le speedcubing en Belgique",
-      "description": "Promouvoir et développer le speedcubing en Belgique en organisant des compétitions de haute qualité, en favorisant une communauté dynamique et en soutenant les cubeurs de tous niveaux dans leur quête d'excellence."
+      "badge": "Notre Mission",
+      "title": "Promouvoir le Speedcubing en Belgique",
+      "description": "Promouvoir et développer le speedcubing en Belgique en organisant des compétitions de haute qualité, en favorisant une communauté dynamique et en soutenant les cubers de tous niveaux dans leur quête d'excellence."
     },
     "getInvolved": {
       "title": "Participez",
-      "titleAccent": "avec nous",
-      "subtitle": "Vous souhaitez contribuer à la communauté belge du speedcubing ? Il existe de nombreuses façons de s'impliquer !",
+      "subtitle": "Vous voulez contribuer à la communauté belge de speedcubing ? Il existe de nombreuses façons de vous impliquer !",
       "actions": [
-        {
-          "label": "Participer",
-          "href": "#competitions",
-          "variant": "dark"
-        },
-        {
-          "label": "Bénévolat",
-          "href": "#volunteer",
-          "variant": "dark"
-        },
-        {
-          "label": "Organiser",
-          "href": "#organize",
-          "variant": "outline"
-        }
+        { "label": "Compétition", "href": "/competitions", "variant": "dark" },
+        { "label": "Bénévole", "href": "/contact", "variant": "outline" },
+        { "label": "Organiser", "href": "/contact", "variant": "outline" }
       ]
     }
+  },
+  "competitions": {
+    "hero": {
+      "title": "Compétitions à Venir",
+      "subtitle": "Participez aux compétitions officielles de speedcubing sanctionnées par la WCA en Belgique. Tous les niveaux sont les bienvenus !"
+    },
+    "upcoming": {
+      "title": "Compétitions à Venir",
+      "empty": "Aucune compétition à venir pour le moment. Revenez bientôt !"
+    },
+    "firstTime": {
+      "title": "Première Fois",
+      "titleAccent": "en Compétition ?",
+      "subtitle": "Pas d'inquiétude ! Nos compétitions sont adaptées aux débutants. Voici ce que vous devez savoir :",
+      "tips": [
+        "Vous devez savoir résoudre un Rubik's Cube (toute vitesse convient !)",
+        "L'inscription se fait via le site de la World Cube Association",
+        "Apportez vos propres cubes — il est recommandé d'avoir au moins une sauvegarde",
+        "Les concurrents aident à juger et à scrambler pour les autres — cela fait partie de l'expérience !"
+      ],
+      "cta": {
+        "label": "Inscrivez-vous sur WCA",
+        "href": "https://www.worldcubeassociation.org/register"
+      }
+    },
+    "card": {
+      "limit": "limite de concurrents",
+      "events": "Événements",
+      "register": "S'inscrire Maintenant",
+      "view": "Voir Détails",
+      "details": "Détails",
+      "status": {
+        "open": "Inscriptions Ouvertes",
+        "closed": "Inscriptions Fermées",
+        "upcoming": "À Venir",
+        "live": "En Direct"
+      }
+    },
+    "error": {
+      "failload": "Échec du chargement des compétitions. Veuillez réessayer plus tard."
+    }
+  },
+  "records": {
+    "hero": {
+      "title": "Records Nationaux",
+      "subtitle": "Célébrer les temps les plus rapides réalisés par les speedcubers belges lors de compétitions officielles WCA."
+    },
+    "table": {
+      "title": "Tous les ",
+      "accentTitle": "Records Nationaux",
+      "event": "Événement",
+      "time": "Temps",
+      "holder": "Détenteur du Record",
+      "worldRank": "Classement Mondial",
+      "competition": "Compétition",
+      "date": "Date",
+      "disclaimer": "Données provenant de la ",
+      "source": "World Cube Association",
+      "disclaimerEnd": ", mises à jour quotidiennement. Cache de 6 heures."
+    },
+    "info": {
+      "title": "À propos des Records Nationaux",
+      "titleAccent": "en Belgique",
+      "description": "Les records nationaux sont officiellement reconnus par la World Cube Association (WCA) et doivent être établis lors de compétitions WCA officielles organisées en Belgique.",
+      "facts": [
+        "<strong>Single :</strong> La résolution la plus rapide d'un seul solve lors d'un événement",
+        "<strong>Average :</strong> La moyenne de 3 solves (excluant le meilleur et le pire des 5 solves)",
+        "Tous les temps sont vérifiés par des delegates et juges officiels de la WCA"
+      ]
+    },
+    "error": {
+      "failload": "Échec du chargement des records. Veuillez réessayer plus tard."
+    }
+  },
+  "delegates": {
+    "hero": {
+      "title": "Delegates",
+      "subtitle": "Rencontrez les WCA delegates qui assurent la qualité et l'équité des compétitions de speedcubing en Belgique."
+    },
+    "info": {
+      "title": "Qu'est-ce qu'un WCA Delegate ?",
+      "description": "Les WCA Delegates sont des officiels nommés par la World Cube Association pour superviser les compétitions et s'assurer qu'elles respectent les règlements WCA. Ils sont responsables de :",
+      "responsibilities": [
+        "Vérifier que les compétitions respectent toutes les normes et règlements WCA",
+        "Résoudre les incidents et assurer l'équité pendant les compétitions",
+        "Approuver et télécharger les résultats officiels dans la base de données WCA",
+        "Former les juges, scramblers et organisateurs aux procédures correctes",
+        "Soutenir les organisateurs dans la planification et la logistique"
+      ]
+    },
+    "roles": {
+      "heading": "Notre Équipe de Delegates",
+      "role": {
+        "junior": "Junior Delegate",
+        "trainee": "Trainee Delegate",
+        "region": "Région : Belgique",
+        "region2": "Région : Italie",
+        "profile": "WCA Profile"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Vous avez une question ou souhaitez vous impliquer ? Nous serions ravis de vous entendre.",
+    "form": [
+      { "label": "Nom", "placeholder": "Votre nom" },
+      { "label": "Email", "placeholder": "Votre email" },
+      { "label": "Sujet", "placeholder": "De quoi s'agit-il ?" },
+      { "label": "Message", "placeholder": "Dites-nous en plus sur votre demande..." },
+      { "label": "Vérification anti-spam : quel est ", "placeholder": "Votre réponse" }
+    ],
+    "error": {
+      "validation": "Veuillez remplir tous les champs et répondre correctement au captcha.",
+      "sendFail": "Échec de l'envoi du message. Veuillez réessayer plus tard.",
+      "wrong": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "successTitle": "Message Envoyé !",
+    "successMsg": "Merci pour votre message. Nous vous répondrons dès que possible.",
+    "cta": { "label": "Envoyer Un Autre Message" },
+    "button": { "label": "Envoyer le Message" },
+    "directContact": "ou contactez-nous directement à :"
   },
   "footer": {
     "about": {
       "heading": "À propos de SCB",
-      "description": "Speedcubing Belgium est l'organisation représentative officielle pour la résolution compétitive du Rubik's Cube en Belgique, affiliée à la World Cube Association (WCA)."
+      "description": "Speedcubing Belgium est l'organisation représentative officielle du Rubik's Cube compétitif en Belgique, affiliée à la World Cube Association (WCA)."
     },
     "columns": [
       {
-        "heading": "Liens rapides",
+        "heading": "Liens Rapides",
         "links": [
-          {
-            "label": "Compétition WCA",
-            "href": "#"
-          },
-          {
-            "label": "Devenir membre",
-            "href": "#"
-          },
-          {
-            "label": "Organiser une compétition",
-            "href": "#"
-          }
+          { "label": "Compétition WCA", "href": "#" },
+          { "label": "Bénévole", "href": "#" },
+          { "label": "Organiser une Compétition", "href": "#" }
         ]
       },
       {
-        "heading": "Contactez-nous",
+        "heading": "Contactez-Nous",
         "links": [
-          {
-            "label": "info@speedcubing.be",
-            "href": "mailto:info@speedcubing.be"
-          }
+          { "label": "info@speedcubing.be", "href": "mailto:info@speedcubing.be" }
         ]
       }
     ],
-    "copyright": "Speedcubing Belgium. Tous droits réservés."
-  },
-  "competitions": {
-    "hero": {
-      "title": "Compétitions à venir",
-      "subtitle": "Participez aux compétitions officielles de speedcubing sanctionnées par la WCA à travers la Belgique. Tous niveaux bienvenus !"
+    "copyright": {
+      "icon": "© ",
+      "text": "Speedcubing Belgium. Réalisé par ",
+      "rights": ". Tous droits réservés.",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Termes et Conditions"
     },
-    "upcoming": {
-      "title": "Compétitions à venir",
-      "empty": "Aucune compétition à venir pour le moment. Revenez bientôt !"
-    },
-    "firstTime": {
-      "badge": "Nouveau en compétition ?",
-      "title": "Première",
-      "titleAccent": "Compétition ?",
-      "subtitle": "Pas de panique ! Nos compétitions sont accessibles aux débutants. Voici ce que vous devez savoir :",
-      "tips": [
-        "Vous devez être capable de résoudre un Rubik's Cube (peu importe la vitesse !)",
-        "L'inscription se fait via le site de la World Cube Association",
-        "Apportez vos propres cubes — nous recommandons d'en avoir au moins un de rechange",
-        "Les participants s'aident mutuellement comme juges et scramblers — c'est l'esprit de la compétition !"
-      ],
-      "cta": {
-        "label": "S'inscrire sur la WCA",
-        "href": "https://www.worldcubeassociation.org/register"
-      }
+    "social": {
+      "links": [
+        { "icon": "Facebook", "href": "#" },
+        { "icon": "Instagram", "href": "#" }
+      ]
     }
   }
 }
