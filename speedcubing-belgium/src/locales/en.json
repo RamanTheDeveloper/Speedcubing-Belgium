@@ -30,7 +30,7 @@
       "paragraphs": [
         "Speedcubing Belgium (SCB) is the official representative organization for speedcubing in Belgium, working in close collaboration with the World Cube Association (WCA).",
         "We organize and oversee official speedcubing competitions throughout Belgium, where cubers of all skill levels compete to solve various twisty puzzles as fast as possible.",
-        "Whether you're a beginner who just learned to solve a Rubik's Cube or an experienced speedcuber chasing national records, SCB provides a welcoming community and competitive platform for all."
+        "Whether you're a beginner who just learned to solve a speedcube or an experienced speedcuber chasing national records, SCB provides a welcoming community and competitive platform for all."
       ],
       "cta": { "label": "Learn More About Us", "href": "#about" }
     },
@@ -142,7 +142,7 @@
       "titleAccent": "Competing?",
       "subtitle": "Don't worry! Our competitions are beginner-friendly. Here's what you need to know:",
       "tips": [
-        "You must be able to solve a Rubik's Cube (any speed is fine!)",
+        "You must be able to solve a speedcube (any speed is fine!)",
         "Registration is done through the World Cube Association website",
         "Bring your own cubes — we recommend having at least one backup",
         "Competitors help judge and scramble for each other — it's part of the experience!"
@@ -271,7 +271,7 @@
   "footer": {
     "about": {
       "heading": "About SCB",
-      "description": "Speedcubing Belgium is the official representative organization for competitive Rubik's Cube solving in Belgium, affiliated with the World Cube Association (WCA)."
+      "description": "Speedcubing Belgium is the official representative organization for competitive speedcube solving in Belgium, affiliated with the World Cube Association (WCA)."
     },
     "columns": [
       {
