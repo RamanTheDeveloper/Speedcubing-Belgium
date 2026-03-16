@@ -30,7 +30,7 @@
       "paragraphs": [
         "Speedcubing Belgium (SCB) is de officiële vertegenwoordiger voor speedcubing in België, in nauwe samenwerking met de World Cube Association (WCA).",
         "Wij organiseren en begeleiden officiële speedcubing-competities in heel België, waar cubers van alle niveaus strijden om verschillende twisty puzzels zo snel mogelijk op te lossen.",
-        "Of je nu een beginner bent die net een Rubik's Cube kan oplossen of een ervaren speedcuber die nationale records nastreeft, SCB biedt een gastvrije community en een competitief platform voor iedereen."
+        "Of je nu een beginner bent die net een speedcube kan oplossen of een ervaren speedcuber die nationale records nastreeft, SCB biedt een gastvrije community en een competitief platform voor iedereen."
       ],
       "cta": { "label": "Lees Meer Over Ons", "href": "#about" }
     },
@@ -142,7 +142,7 @@
       "titleAccent": "Deelnemen?",
       "subtitle": "Maak je geen zorgen! Onze competities zijn beginner-vriendelijk. Dit moet je weten:",
       "tips": [
-        "Je moet een Rubik's Cube kunnen oplossen (snelheid maakt niet uit!)",
+        "Je moet een speedcube kunnen oplossen (snelheid maakt niet uit!)",
         "Registratie gebeurt via de World Cube Association-website",
         "Breng je eigen cubes mee — minstens één reserve aanbevolen",
         "Deelnemers helpen met jureren en scramblen voor elkaar — onderdeel van de ervaring!"
@@ -252,7 +252,7 @@
   "footer": {
     "about": {
       "heading": "Over SCB",
-      "description": "Speedcubing Belgium is de officiële vertegenwoordiger voor competitief Rubik's Cube-oplossen in België, aangesloten bij de World Cube Association (WCA)."
+      "description": "Speedcubing Belgium is de officiële vertegenwoordiger voor competitief speedcube oplossen in België, aangesloten bij de World Cube Association (WCA)."
     },
     "columns": [
       {

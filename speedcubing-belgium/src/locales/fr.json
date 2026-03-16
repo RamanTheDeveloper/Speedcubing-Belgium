@@ -30,7 +30,7 @@
       "paragraphs": [
         "Speedcubing Belgium (SCB) est l'organisation représentative officielle du speedcubing en Belgique, travaillant en étroite collaboration avec la World Cube Association (WCA).",
         "Nous organisons et supervisons des compétitions officielles de speedcubing à travers la Belgique, où des cubers de tous niveaux s'affrontent pour résoudre différents puzzles le plus rapidement possible.",
-        "Que vous soyez débutant et que vous veniez d'apprendre à résoudre un Rubik's Cube ou un speedcuber expérimenté à la recherche de records nationaux, SCB offre une communauté accueillante et une plateforme compétitive pour tous."
+        "Que vous soyez débutant et que vous veniez d'apprendre à résoudre un speedcube ou un speedcuber expérimenté à la recherche de records nationaux, SCB offre une communauté accueillante et une plateforme compétitive pour tous."
       ],
       "cta": { "label": "En Savoir Plus Sur Nous", "href": "#about" }
     },
@@ -142,7 +142,7 @@
       "titleAccent": "en Compétition ?",
       "subtitle": "Pas d'inquiétude ! Nos compétitions sont adaptées aux débutants. Voici ce que vous devez savoir :",
       "tips": [
-        "Vous devez savoir résoudre un Rubik's Cube (toute vitesse convient !)",
+        "Vous devez savoir résoudre un speedcube (toute vitesse convient !)",
         "L'inscription se fait via le site de la World Cube Association",
         "Apportez vos propres cubes — il est recommandé d'avoir au moins une sauvegarde",
         "Les concurrents aident à juger et à scrambler pour les autres — cela fait partie de l'expérience !"
@@ -252,7 +252,7 @@
   "footer": {
     "about": {
       "heading": "À propos de SCB",
-      "description": "Speedcubing Belgium est l'organisation représentative officielle du Rubik's Cube compétitif en Belgique, affiliée à la World Cube Association (WCA)."
+      "description": "Speedcubing Belgium est l'organisation représentative officielle du speedcube compétitif en Belgique, affiliée à la World Cube Association (WCA)."
     },
     "columns": [
       {
