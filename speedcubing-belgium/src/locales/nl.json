@@ -57,7 +57,10 @@
     "joinCta": {
       "title": "Klaar om mee te doen?",
       "subtitle": "Bekijk onze aankomende competities en word onderdeel van de Belgische speedcubing-scene!",
-      "cta": { "label": "Bekijk Aankomende Evenementen", "href": "#competitions" }
+      "cta": {
+        "label": "Bekijk Aankomende Evenementen",
+        "href": "#competitions"
+      }
     }
   },
 
@@ -70,46 +73,46 @@
       "title": "Onze Evolutie",
       "events": [
         {
-          "year": "Begin 2010s",
+          "year": "Begin jaren 2000",
+          "shortYear": "00",
+          "title": "Speedcubing komt naar België",
+          "description": "Na de oprichting van de WCA in 2004 beginnen de eerste Belgische cubers deel te nemen aan competities. Lars Vandenbergh vestigt opmerkelijk genoeg wereldrecords in 4x4, 5x5 en Square-1."
+        },
+        {
+          "year": "2006",
+          "shortYear": "06",
+          "title": "De eerste Belgische competitie",
+          "description": "Belgian Open 2006 is de eerste Belgische competitie en brengt cubers uit het hele land samen, terwijl het de Belgische community verbindt met de internationale speedcubing scene."
+        },
+        {
+          "year": "Begin jaren 2010",
           "shortYear": "10",
-          "title": "Speedcubing Komt naar België",
-          "description": "Geïnspireerd door de groeiende internationale speedcubing-scene begonnen de eerste Belgische cubers samen te komen en kleine competities te organiseren. Deze vroege evenementen legden de basis voor een nationale cubing-community."
-        },
-        {
-          "year": "Midden 2010s",
-          "shortYear": "15",
-          "title": "De Eerste Belgische Competities",
-          "description": "België begon officiële WCA-competities te organiseren, waarbij cubers uit het hele land samenkwamen en de Belgische community werd verbonden met de internationale speedcubing-scene."
-        },
-        {
-          "year": "2018",
-          "shortYear": "18",
-          "title": "Community Organisatie",
-          "description": "Na meerdere grassroots competities georganiseerd door vrijwilligers werd de Belgische cubing-community meer gestructureerd. Toegewijde organisatoren en delegates hielpen om competities te laten groeien."
+          "title": "Eerste groei van speedcubing",
+          "description": "Vanaf 2012 worden er consistent meer competities georganiseerd in België. Lars Vandenbergh (2010-2013) en Geert Bicler (2013-2017) nemen de rol van WCA Delegate op zich, waardoor Belgische speedcubers meer kansen krijgen om deel te nemen."
         },
         {
           "year": "2019",
           "shortYear": "19",
-          "title": "Gestage Groei",
-          "description": "België organiseerde vijf WCA-competities in één jaar, wat de toenemende populariteit van speedcubing en de kracht van de nationale community aantoonde."
+          "title": "Oprichting van Speedcubing Belgium",
+          "description": "In 2018 wordt Manu Vereecken aangesteld als WCA Delegate. Hij heeft de Belgische speedcubing scene eigenhandig getransformeerd door competities efficiënter te organiseren. Samen met andere vrijwilligers wordt Speedcubing Belgium opgericht op 27 januari 2019 als centraal platform voor speedcubing in ons land. De scene begint sneller te groeien."
         },
         {
-          "year": "2020–2021",
-          "shortYear": "20",
-          "title": "Pandemiepauze",
-          "description": "De COVID-19-pandemie pauzeerde tijdelijk de competities, maar de community bleef actief en klaar om snel terug te keren."
+          "year": "2021",
+          "shortYear": "21",
+          "title": "Uitbreiding na de pandemie",
+          "description": "De COVID-19-pandemie legde competities tijdelijk stil, met de eerste Belgische competitie die opnieuw plaatsvond in november 2021. In 2022 voegen Aurelien Marion en Bruno Vervoort zich bij Manu als delegates. Na de pandemie nam de interesse in speedcubing sterk toe, met competities die binnen enkele minuten volzet waren. Het eerste Belgische kampioenschap wordt gehouden in 2022."
         },
         {
-          "year": "2022",
-          "shortYear": "22",
-          "title": "Een Nieuwe Era van Grote Competities",
-          "description": "Na de pandemie nam de interesse in speedcubing toe. Competities werden groter dan ooit, met evenementen tot 181 deelnemers en een groter organiserend team."
+          "year": "2024",
+          "shortYear": "24",
+          "title": "Een nieuw tijdperk van grote competities",
+          "description": "Met meer mensen en meer organisatoren zijn er meer competities voor meer deelnemers. In 2024 namen meer dan 1400 mensen deel aan 13 Belgische competities, waarbij meer nationale records werden gebroken dan ooit tevoren."
         },
         {
-          "year": "Vandaag",
+          "year": "Today",
           "shortYear": "Now",
           "title": "Speedcubing Belgium",
-          "description": "Speedcubing Belgium ondersteunt nu een groeiende community van cubers en organisatoren, organiseert competities in het hele land en breidt de Belgische speedcubing-scene verder uit."
+          "description": "België telt momenteel 6 WCA Delegates en heeft door de jaren heen meer dan 100 competities georganiseerd. Met meer mensen zijn er meer organisatoren en competities op nieuwe locaties. Belgian Nationals 2025 is de grootste Belgische competitie ooit met 192 deelnemers."
         }
       ]
     },
@@ -266,7 +269,10 @@
       {
         "heading": "Contacteer Ons",
         "links": [
-          { "label": "info@speedcubingbelgium.be", "href": "mailto:info@speedcubingbelgium.be" }
+          {
+            "label": "info@speedcubingbelgium.be",
+            "href": "mailto:info@speedcubingbelgium.be"
+          }
         ]
       }
     ],

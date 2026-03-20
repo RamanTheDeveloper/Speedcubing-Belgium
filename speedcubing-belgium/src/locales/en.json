@@ -70,46 +70,46 @@
       "title": "Our Journey",
       "events": [
         {
+          "year": "Early 2000s",
+          "shortYear": "00",
+          "title": "Speedcubing Arrives in Belgium",
+          "description": "After the establishment of the WCA in 2004, the first Belgian cubers begin attending competitions. Notably, Lars Vandenbergh sets World Records in 4x4, 5x5 and Square-1."
+        },
+        {
+          "year": "2006",
+          "shortYear": "06",
+          "title": "The First Belgian Competition",
+          "description": "Belgian Open 2006 is the first Belgian competition, bringing together cubers from across the country and connecting the Belgian community to the international speedcubing scene."
+        },
+        {
           "year": "Early 2010s",
           "shortYear": "10",
-          "title": "Speedcubing Arrives in Belgium",
-          "description": "Inspired by the growing international speedcubing scene, the first Belgian cubers began meeting and organizing small competitions. These early events laid the foundation for a national cubing community."
-        },
-        {
-          "year": "Mid 2010s",
-          "shortYear": "15",
-          "title": "The First Belgian Competitions",
-          "description": "Belgium started hosting official WCA competitions, bringing together cubers from across the country and connecting the Belgian community to the international speedcubing scene."
-        },
-        {
-          "year": "2018",
-          "shortYear": "18",
-          "title": "Community Organization",
-          "description": "After several grassroots competitions organized by volunteers, the Belgian cubing community became more structured. Dedicated organizers and delegates helped ensure competitions could continue to grow."
+          "title": "First Growth of Speedcubing",
+          "description": "As of 2012, more competitions are consistently being hosted in Belgium. Lars Vandenbergh (2010-2013) and Geert Bicler (2013-2017) step up as WCA Delegates, giving more opportunity for Belgian speedcubers to compete."
         },
         {
           "year": "2019",
           "shortYear": "19",
-          "title": "Steady Growth",
-          "description": "Belgium hosted five WCA competitions in a single year, showing the increasing popularity of speedcubing and the strength of the national community."
+          "title": "Establishment of Speedcubing Belgium",
+          "description": "In 2018 Manu Vereecken is appointed as a WCA Delegate. He single-handedly transformed the Belgian speedcubing scene, running competitions more efficiently. Together with other volunteers, Speedcubing Belgium is founded on 27 January 2019 as a central platform for speedcubing in our country. The speedcubing scene starts growing more rapidly."
         },
         {
-          "year": "2020–2021",
-          "shortYear": "20",
-          "title": "Pandemic Pause",
-          "description": "The COVID-19 pandemic temporarily paused competitions, but the community remained active and ready to return to events as soon as possible."
+          "year": "2021",
+          "shortYear": "21",
+          "title": "Post-Pandemic Expansion",
+          "description": "The COVID-19 pandemic temporarily paused competitions, with the first Belgian competition being held again in November 2021. In 2022, Aurelien Marion and Bruno Vervoort join Manu as delegates. After the pandemic, interest in speedcubing surged with competitions filling up within minutes. The first Belgian National Championship is held in 2022."
         },
         {
-          "year": "2022",
-          "shortYear": "22",
+          "year": "2024",
+          "shortYear": "24",
           "title": "A New Era of Large Competitions",
-          "description": "After the pandemic, interest in speedcubing surged. Competitions grew larger than ever, with events reaching up to 181 competitors and requiring a larger organizing team."
+          "description": "With more people and more organisers, there are more competitions for more people. In 2024, over 1400 people attended 13 Belgian competitions with more National Records being broken than ever before."
         },
         {
           "year": "Today",
           "shortYear": "Now",
           "title": "Speedcubing Belgium",
-          "description": "Speedcubing Belgium now supports a growing community of cubers and organizers, hosting competitions across the country and continuing to expand the Belgian speedcubing scene."
+          "description": "Belgium currently counts 6 WCA Delegates, having hosted over 100 competitions throughout the years. With more people there are more organizers and more competitions in new locations. Belgian Nationals 2025 is Belgium’s biggest ever competition with 192 competitors."
         }
       ]
     },
