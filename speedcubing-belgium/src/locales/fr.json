@@ -16,7 +16,10 @@
       "badge": "Organisation WCA Officielle",
       "title": "Bienvenue à\nSpeedcubing Belgium",
       "subtitle": "Rejoignez la communauté de speedcubing à la croissance la plus rapide en Belgique",
-      "primaryCta": { "label": "Voir les Compétitions", "href": "#competitions" },
+      "primaryCta": {
+        "label": "Voir les Compétitions",
+        "href": "#competitions"
+      },
       "secondaryCta": { "label": "Records Nationaux", "href": "#records" }
     },
     "stats": [
@@ -70,46 +73,46 @@
       "title": "Notre Parcours",
       "events": [
         {
+          "year": "Début des années 2000",
+          "shortYear": "00",
+          "title": "Le speedcubing arrive en Belgique",
+          "description": "Après la création de la WCA en 2004, les premiers cubers belges commencent à participer à des compétitions. Notamment, Lars Vandenbergh établit des records du monde en 4x4, 5x5 et Square-1."
+        },
+        {
+          "year": "2006",
+          "shortYear": "06",
+          "title": "La première compétition belge",
+          "description": "Belgian Open 2006 est la première compétition belge, rassemblant des cubers de tout le pays et reliant la communauté belge à la scène internationale du speedcubing."
+        },
+        {
           "year": "Début des années 2010",
           "shortYear": "10",
-          "title": "Le Speedcubing Arrive en Belgique",
-          "description": "Inspirés par la scène internationale de speedcubing en pleine croissance, les premiers cubers belges ont commencé à se rencontrer et à organiser de petites compétitions. Ces premiers événements ont jeté les bases d'une communauté nationale de cubing."
-        },
-        {
-          "year": "Milieu des années 2010",
-          "shortYear": "15",
-          "title": "Les Premières Compétitions Belges",
-          "description": "La Belgique a commencé à accueillir des compétitions WCA officielles, rassemblant des cubers de tout le pays et connectant la communauté belge à la scène internationale de speedcubing."
-        },
-        {
-          "year": "2018",
-          "shortYear": "18",
-          "title": "Organisation Communautaire",
-          "description": "Après plusieurs compétitions locales organisées par des bénévoles, la communauté belge de cubing est devenue plus structurée. Des organisateurs et delegates dédiés ont aidé à assurer la croissance continue des compétitions."
+          "title": "Première croissance du speedcubing",
+          "description": "À partir de 2012, de plus en plus de compétitions sont organisées régulièrement en Belgique. Lars Vandenbergh (2010-2013) et Geert Bicler (2013-2017) deviennent WCA Delegates, offrant davantage d'opportunités aux speedcubers belges de participer."
         },
         {
           "year": "2019",
           "shortYear": "19",
-          "title": "Croissance Constante",
-          "description": "La Belgique a accueilli cinq compétitions WCA en une seule année, montrant la popularité croissante du speedcubing et la force de la communauté nationale."
+          "title": "Création de Speedcubing Belgium",
+          "description": "En 2018, Manu Vereecken est nommé WCA Delegate. Il a transformé à lui seul la scène belge du speedcubing en organisant les compétitions de manière plus efficace. Avec d'autres bénévoles, Speedcubing Belgium est fondé le 27 janvier 2019 en tant que plateforme centrale pour le speedcubing dans notre pays. La scène commence à croître plus rapidement."
         },
         {
-          "year": "2020–2021",
-          "shortYear": "20",
-          "title": "Pause Pandémique",
-          "description": "La pandémie de COVID-19 a temporairement interrompu les compétitions, mais la communauté est restée active et prête à revenir aux événements dès que possible."
+          "year": "2021",
+          "shortYear": "21",
+          "title": "Expansion après la pandémie",
+          "description": "La pandémie de COVID-19 a temporairement interrompu les compétitions, la première compétition belge reprenant en novembre 2021. En 2022, Aurelien Marion et Bruno Vervoort rejoignent Manu en tant que delegates. Après la pandémie, l'intérêt pour le speedcubing a fortement augmenté, les compétitions se remplissant en quelques minutes. Le premier championnat national belge a lieu en 2022."
         },
         {
-          "year": "2022",
-          "shortYear": "22",
-          "title": "Une Nouvelle Ère de Grandes Compétitions",
-          "description": "Après la pandémie, l'intérêt pour le speedcubing a explosé. Les compétitions sont devenues plus grandes que jamais, avec des événements accueillant jusqu'à 181 participants et nécessitant une équipe organisatrice plus importante."
+          "year": "2024",
+          "shortYear": "24",
+          "title": "Une nouvelle ère de grandes compétitions",
+          "description": "Avec plus de participants et plus d’organisateurs, il y a davantage de compétitions pour plus de monde. En 2024, plus de 1400 personnes ont participé à 13 compétitions belges, avec un nombre record de records nationaux battus."
         },
         {
-          "year": "Aujourd'hui",
+          "year": "Today",
           "shortYear": "Now",
           "title": "Speedcubing Belgium",
-          "description": "Speedcubing Belgium soutient désormais une communauté croissante de cubers et d'organisateurs, organise des compétitions dans tout le pays et continue d'élargir la scène belge du speedcubing."
+          "description": "La Belgique compte actuellement 6 WCA Delegates et a organisé plus de 100 compétitions au fil des années. Avec plus de participants, il y a davantage d’organisateurs et de compétitions dans de nouveaux lieux. Belgian Nationals 2025 est la plus grande compétition jamais organisée en Belgique avec 192 participants."
         }
       ]
     },
@@ -235,8 +238,14 @@
       { "label": "Nom", "placeholder": "Votre nom" },
       { "label": "Email", "placeholder": "Votre email" },
       { "label": "Sujet", "placeholder": "De quoi s'agit-il ?" },
-      { "label": "Message", "placeholder": "Dites-nous en plus sur votre demande..." },
-      { "label": "Vérification anti-spam : quel est ", "placeholder": "Votre réponse" }
+      {
+        "label": "Message",
+        "placeholder": "Dites-nous en plus sur votre demande..."
+      },
+      {
+        "label": "Vérification anti-spam : quel est ",
+        "placeholder": "Votre réponse"
+      }
     ],
     "error": {
       "validation": "Veuillez remplir tous les champs et répondre correctement au captcha.",
@@ -266,7 +275,10 @@
       {
         "heading": "Contactez-Nous",
         "links": [
-          { "label": "info@speedcubingbelgium.be", "href": "mailto:info@speedcubingbelgium.be" }
+          {
+            "label": "info@speedcubingbelgium.be",
+            "href": "mailto:info@speedcubingbelgium.be"
+          }
         ]
       }
     ],
