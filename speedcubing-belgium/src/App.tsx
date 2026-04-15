@@ -7,6 +7,8 @@ import CompetitionsPage from "./pages/CompetitionsPage";
 import RecordsPage from "./pages/RecordsPage";
 import DelegatesPage from "./pages/DelegatesPage";
 import ContactPage from "./pages/ContactPage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
 import ScrollToTop from "./ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 import { useEffect } from "react";
@@ -34,6 +36,8 @@ export default function App() {
           <Route path="/records" element={<RecordsPage />} />
           <Route path="/delegates" element={<DelegatesPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
         </Routes>
         <Footer />
         <CookieBanner />
