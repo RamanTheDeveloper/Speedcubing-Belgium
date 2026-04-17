@@ -1,8 +1,9 @@
-import { Calendar, MapPin, Users, ArrowRight } from "lucide-react";
+import { Calendar, MapPin, Users, ArrowRight, Loader2 } from "lucide-react";
 import EventBadge from "./EventsBadge";
 import type { Competition } from "../../types/Wca";
 import { formatEventId } from "../../utils/eventUtils";
 import { useTranslation } from "../../i18n";
+import { useWcaLiveUrl } from "../../hooks/useWcaLiveUrl";
 
 interface CompetitionCardProps {
   competition: Competition;
@@ -49,6 +50,10 @@ export default function CompetitionCard({ competition }: CompetitionCardProps) {
   const daysUntilStart = getDaysUntilStart(competition.startDate);
 
   const status = getRegistrationStatus(competition);
+  const { liveUrl, loading: liveUrlLoading } = useWcaLiveUrl(
+    competition.id,
+    status === "live"
+  );
 
   return (
     <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-5 shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-yellow-400">
@@ -101,14 +106,30 @@ export default function CompetitionCard({ competition }: CompetitionCardProps) {
       {/* Actions */}
       <div className="flex items-center gap-3 mt-auto pt-2">
         {status === "live" ? (
-          <a
-            href={`https://live.worldcubeassociation.org/competitions/${competition.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
-          >
-            {comp.card.status.live} <ArrowRight size={15} />
-          </a>
+          liveUrlLoading ? (
+            <span className="flex items-center gap-2 bg-blue-400 text-white font-semibold px-5 py-2.5 rounded-lg text-sm cursor-wait">
+              <Loader2 size={15} className="animate-spin" />
+              {comp.card.status.live}
+            </span>
+          ) : liveUrl ? (
+            <a
+              href={liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              {comp.card.status.live} <ArrowRight size={15} />
+            </a>
+          ) : (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-900 hover:bg-gray-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors text-sm"
+            >
+              {comp.card.view} <ArrowRight size={15} />
+            </a>
+          )
         ) : (
           <a
             href={url}
