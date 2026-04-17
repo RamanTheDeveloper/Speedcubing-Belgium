@@ -2,7 +2,7 @@ import type { NationalRecord, RecordResult } from "../types/records";
 import { formatEventId, ORDERED_EVENT_IDS } from "../utils/eventUtils";
 
 const RAW_BASE =
-  "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/master/api";
+  "https://raw.githubusercontent.com/robiningelbrecht/wca-rest-api/refs/heads/v1";
 const CACHE_KEY = "wca_be_national_records_v8";
 const CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 
