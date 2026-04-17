@@ -268,6 +268,118 @@
     },
     "directContact": "or reach us directly at:"
   },
+  "privacy": {
+    "hero": {
+      "title": "Privacy Policy",
+      "subtitle": "Last updated: April 2025"
+    },
+    "sections": [
+      {
+        "heading": "1. Introduction",
+        "paragraphs": [
+          "Speedcubing Belgium ('SCB', 'we', 'our') is the official representative organisation for speedcubing in Belgium. This Privacy Policy explains how we collect, use, and protect information when you visit our website (speedcubingbelgium.be).",
+          "We are committed to protecting your privacy and handling any personal data we obtain with care and respect."
+        ]
+      },
+      {
+        "heading": "2. Data Controller",
+        "paragraphs": [
+          "The data controller responsible for this website is Speedcubing Belgium, a non-profit organisation registered in Belgium. You can contact us at info@speedcubingbelgium.be."
+        ]
+      },
+      {
+        "heading": "3. Cookies We Use",
+        "paragraphs": [
+          "We use a minimal number of cookies to operate this website.",
+          "Functional cookies (always set): preferred_lang stores your chosen language (en / fr / nl) and expires after 1 year. cookie_consent stores your consent choice so we do not ask again on every visit.",
+          "Analytics cookies (optional — only set if you accept all): Google Analytics (_ga, _ga_*) collects anonymised data about which pages are visited and how visitors navigate the site. These cookies are only set if you click 'Accept all' in the cookie banner. No personal data is sold or shared with advertisers.",
+          "We do not use advertising cookies or third-party tracking cookies."
+        ]
+      },
+      {
+        "heading": "4. How We Use Data",
+        "paragraphs": [
+          "Functional cookie data is used solely to remember your language preference and consent choice, ensuring the website works correctly for you.",
+          "Analytics data (if consented) is used only to improve the website experience. This data is aggregated and anonymised, and we have enabled IP anonymisation in Google Analytics."
+        ]
+      },
+      {
+        "heading": "5. Third Parties",
+        "paragraphs": [
+          "If you accept analytics cookies, anonymised usage data is processed by Google LLC via Google Analytics. Google may transfer this data to servers in the United States under standard contractual clauses.",
+          "We do not sell your data or share it with any other third parties."
+        ]
+      },
+      {
+        "heading": "6. Your Rights",
+        "paragraphs": [
+          "Under the General Data Protection Regulation (GDPR), you have the right to access, rectify, or request erasure of any personal data we hold about you. You can withdraw your analytics consent at any time by clearing your browser cookies or declining in the cookie banner.",
+          "For any data-related requests, please contact us at info@speedcubingbelgium.be."
+        ]
+      },
+      {
+        "heading": "7. Changes to This Policy",
+        "paragraphs": [
+          "We may update this Privacy Policy from time to time. The date at the top of this page reflects the most recent revision. Continued use of the website after changes constitutes acceptance of the updated policy."
+        ]
+      }
+    ]
+  },
+
+  "terms": {
+    "hero": {
+      "title": "Terms & Conditions",
+      "subtitle": "Last updated: April 2025"
+    },
+    "sections": [
+      {
+        "heading": "1. Introduction",
+        "paragraphs": [
+          "These Terms & Conditions govern your use of the Speedcubing Belgium website (speedcubingbelgium.be), operated by Speedcubing Belgium, a non-profit organisation registered in Belgium. By accessing or using the website, you agree to be bound by these terms."
+        ]
+      },
+      {
+        "heading": "2. Use of the Website",
+        "paragraphs": [
+          "You may use this website for lawful, personal, and non-commercial purposes only. You must not misuse, interfere with, or attempt to gain unauthorised access to any part of the website or its underlying systems.",
+          "We reserve the right to suspend or terminate access to the website at any time without notice."
+        ]
+      },
+      {
+        "heading": "3. Intellectual Property",
+        "paragraphs": [
+          "All content on this website — including text, images, logos, and source code — is the property of Speedcubing Belgium unless otherwise stated. You may not reproduce, distribute, or create derivative works without our prior written consent.",
+          "The Speedcubing Belgium name and logo are trademarks of the organisation. The Rubik's Cube and related puzzle brands are trademarks of their respective owners."
+        ]
+      },
+      {
+        "heading": "4. Third-Party Links",
+        "paragraphs": [
+          "This website contains links to third-party websites, including the World Cube Association (worldcubeassociation.org). These links are provided for convenience only. We have no control over those sites and accept no responsibility for their content, privacy practices, or availability."
+        ]
+      },
+      {
+        "heading": "5. Limitation of Liability",
+        "paragraphs": [
+          "We strive to keep the information on this website accurate and up to date, but we make no warranties regarding the completeness, accuracy, or reliability of any content.",
+          "To the fullest extent permitted by Belgian law, Speedcubing Belgium is not liable for any direct, indirect, or consequential loss or damage arising from your use of, or inability to use, this website."
+        ]
+      },
+      {
+        "heading": "6. Governing Law",
+        "paragraphs": [
+          "These Terms & Conditions are governed by and construed in accordance with Belgian law. Any disputes arising from the use of this website shall be subject to the exclusive jurisdiction of the courts of Belgium."
+        ]
+      },
+      {
+        "heading": "7. Contact",
+        "paragraphs": [
+          "If you have any questions about these Terms & Conditions, please contact us at info@speedcubingbelgium.be."
+        ]
+      }
+    ]
+  },
+
   "footer": {
     "about": {
       "heading": "About SCB",

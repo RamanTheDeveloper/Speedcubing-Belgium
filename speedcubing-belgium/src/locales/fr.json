@@ -258,6 +258,118 @@
     "button": { "label": "Envoyer le Message" },
     "directContact": "ou contactez-nous directement à :"
   },
+  "privacy": {
+    "hero": {
+      "title": "Politique de Confidentialité",
+      "subtitle": "Dernière mise à jour : avril 2025"
+    },
+    "sections": [
+      {
+        "heading": "1. Introduction",
+        "paragraphs": [
+          "Speedcubing Belgium (« SCB », « nous ») est l'organisation représentative officielle du speedcubing en Belgique. Cette Politique de Confidentialité explique comment nous collectons, utilisons et protégeons les informations lorsque vous visitez notre site web (speedcubingbelgium.be).",
+          "Nous nous engageons à protéger votre vie privée et à traiter toute donnée personnelle obtenue avec soin et respect."
+        ]
+      },
+      {
+        "heading": "2. Responsable du traitement",
+        "paragraphs": [
+          "Le responsable du traitement pour ce site web est Speedcubing Belgium, une organisation sans but lucratif enregistrée en Belgique. Vous pouvez nous contacter à info@speedcubingbelgium.be."
+        ]
+      },
+      {
+        "heading": "3. Cookies utilisés",
+        "paragraphs": [
+          "Nous utilisons un nombre minimal de cookies pour faire fonctionner ce site web.",
+          "Cookies fonctionnels (toujours définis) : preferred_lang mémorise votre langue choisie (en / fr / nl) et expire après 1 an. cookie_consent mémorise votre choix de consentement aux cookies.",
+          "Cookies analytiques (facultatifs — uniquement si vous acceptez tout) : Google Analytics (_ga, _ga_*) collecte des données anonymisées sur les pages visitées et la navigation. Ces cookies ne sont définis que si vous cliquez sur « Tout accepter » dans la bannière. Aucune donnée personnelle n'est vendue ou partagée avec des annonceurs.",
+          "Nous n'utilisons pas de cookies publicitaires ni de cookies de suivi tiers."
+        ]
+      },
+      {
+        "heading": "4. Utilisation des données",
+        "paragraphs": [
+          "Les données des cookies fonctionnels sont utilisées uniquement pour mémoriser vos préférences de langue et de consentement.",
+          "Les données analytiques (si consenties) sont utilisées uniquement pour améliorer le site web. Ces données sont agrégées, anonymisées, et nous avons activé l'anonymisation des adresses IP dans Google Analytics."
+        ]
+      },
+      {
+        "heading": "5. Tiers",
+        "paragraphs": [
+          "Si vous acceptez les cookies analytiques, les données d'utilisation anonymisées sont traitées par Google LLC via Google Analytics. Google peut transférer ces données vers des serveurs aux États-Unis dans le cadre de clauses contractuelles types.",
+          "Nous ne vendons pas vos données et ne les partageons avec aucun autre tiers."
+        ]
+      },
+      {
+        "heading": "6. Vos droits",
+        "paragraphs": [
+          "En vertu du Règlement Général sur la Protection des Données (RGPD), vous avez le droit d'accéder, de rectifier ou de demander la suppression de toute donnée personnelle que nous détenons. Vous pouvez retirer votre consentement analytique à tout moment en effaçant les cookies de votre navigateur.",
+          "Pour toute demande relative aux données, contactez-nous à info@speedcubingbelgium.be."
+        ]
+      },
+      {
+        "heading": "7. Modifications de cette politique",
+        "paragraphs": [
+          "Nous pouvons mettre à jour cette Politique de Confidentialité de temps à autre. La date en haut de cette page reflète la révision la plus récente. L'utilisation continue du site après les modifications vaut acceptation de la politique mise à jour."
+        ]
+      }
+    ]
+  },
+
+  "terms": {
+    "hero": {
+      "title": "Termes et Conditions",
+      "subtitle": "Dernière mise à jour : avril 2025"
+    },
+    "sections": [
+      {
+        "heading": "1. Introduction",
+        "paragraphs": [
+          "Ces Termes et Conditions régissent votre utilisation du site web Speedcubing Belgium (speedcubingbelgium.be), exploité par Speedcubing Belgium, une organisation sans but lucratif enregistrée en Belgique. En accédant au site ou en l'utilisant, vous acceptez d'être lié par ces conditions."
+        ]
+      },
+      {
+        "heading": "2. Utilisation du site",
+        "paragraphs": [
+          "Vous ne pouvez utiliser ce site web qu'à des fins légales, personnelles et non commerciales. Vous ne devez pas utiliser abusivement, interférer avec ou tenter d'obtenir un accès non autorisé à une partie du site ou de ses systèmes sous-jacents.",
+          "Nous nous réservons le droit de suspendre ou de mettre fin à l'accès au site web à tout moment sans préavis."
+        ]
+      },
+      {
+        "heading": "3. Propriété intellectuelle",
+        "paragraphs": [
+          "Tout le contenu de ce site — y compris textes, images, logos et code source — est la propriété de Speedcubing Belgium sauf indication contraire. Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées sans notre consentement écrit préalable.",
+          "Le nom et le logo Speedcubing Belgium sont des marques de l'organisation. Le Rubik's Cube et les marques de puzzles associées sont des marques de leurs propriétaires respectifs."
+        ]
+      },
+      {
+        "heading": "4. Liens vers des tiers",
+        "paragraphs": [
+          "Ce site contient des liens vers des sites tiers, notamment la World Cube Association (worldcubeassociation.org). Ces liens sont fournis uniquement pour votre commodité. Nous n'avons aucun contrôle sur ces sites et n'acceptons aucune responsabilité quant à leur contenu, leurs pratiques de confidentialité ou leur disponibilité."
+        ]
+      },
+      {
+        "heading": "5. Limitation de responsabilité",
+        "paragraphs": [
+          "Nous nous efforçons de maintenir les informations exactes et à jour, mais nous ne donnons aucune garantie quant à l'exhaustivité, l'exactitude ou la fiabilité du contenu.",
+          "Dans toute la mesure permise par le droit belge, Speedcubing Belgium n'est pas responsable des pertes ou dommages directs, indirects ou consécutifs découlant de votre utilisation, ou de votre incapacité à utiliser, ce site web."
+        ]
+      },
+      {
+        "heading": "6. Droit applicable",
+        "paragraphs": [
+          "Ces Termes et Conditions sont régis par le droit belge. Tout litige découlant de l'utilisation de ce site sera soumis à la compétence exclusive des tribunaux belges."
+        ]
+      },
+      {
+        "heading": "7. Contact",
+        "paragraphs": [
+          "Si vous avez des questions concernant ces Termes et Conditions, veuillez nous contacter à info@speedcubingbelgium.be."
+        ]
+      }
+    ]
+  },
+
   "footer": {
     "about": {
       "heading": "À propos de SCB",

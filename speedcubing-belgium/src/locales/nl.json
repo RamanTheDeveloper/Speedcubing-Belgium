@@ -252,6 +252,118 @@
     "button": { "label": "Verstuur Bericht" },
     "directContact": "of neem rechtstreeks contact met ons op:"
   },
+  "privacy": {
+    "hero": {
+      "title": "Privacybeleid",
+      "subtitle": "Laatst bijgewerkt: april 2025"
+    },
+    "sections": [
+      {
+        "heading": "1. Inleiding",
+        "paragraphs": [
+          "Speedcubing Belgium (\"SCB\", \"wij\", \"ons\") is de officiële vertegenwoordigingsorganisatie voor speedcubing in België. Dit Privacybeleid legt uit hoe wij informatie verzamelen, gebruiken en beschermen wanneer u onze website (speedcubingbelgium.be) bezoekt.",
+          "Wij zetten ons in voor de bescherming van uw privacy en gaan zorgvuldig en respectvol om met alle persoonlijke gegevens die wij verkrijgen."
+        ]
+      },
+      {
+        "heading": "2. Verwerkingsverantwoordelijke",
+        "paragraphs": [
+          "De verwerkingsverantwoordelijke voor deze website is Speedcubing Belgium, een non-profitorganisatie geregistreerd in België. U kunt contact met ons opnemen via info@speedcubingbelgium.be."
+        ]
+      },
+      {
+        "heading": "3. Cookies die we gebruiken",
+        "paragraphs": [
+          "Wij gebruiken een minimaal aantal cookies om deze website te laten werken.",
+          "Functionele cookies (altijd ingesteld): preferred_lang onthoudt uw gekozen taal (en / fr / nl) en verloopt na 1 jaar. cookie_consent slaat uw cookietoestemmingskeuze op.",
+          "Analytische cookies (optioneel — alleen ingesteld als u alles accepteert): Google Analytics (_ga, _ga_*) verzamelt geanonimiseerde gegevens over bezochte pagina's en navigatie. Deze cookies worden alleen ingesteld als u op \"Alles accepteren\" klikt in de cookiebanner. Er worden geen persoonlijke gegevens verkocht of gedeeld met adverteerders.",
+          "Wij gebruiken geen reclame- of tracking cookies van derden."
+        ]
+      },
+      {
+        "heading": "4. Gebruik van gegevens",
+        "paragraphs": [
+          "Functionele cookiegegevens worden uitsluitend gebruikt om uw taalvoorkeur en toestemmingskeuze te onthouden.",
+          "Analytische gegevens (indien toestemming gegeven) worden uitsluitend gebruikt om de website te verbeteren. Deze gegevens zijn geaggregeerd en geanonimiseerd, en wij hebben IP-anonimisering ingeschakeld in Google Analytics."
+        ]
+      },
+      {
+        "heading": "5. Derden",
+        "paragraphs": [
+          "Als u analytische cookies accepteert, worden geanonimiseerde gebruiksgegevens verwerkt door Google LLC via Google Analytics. Google kan deze gegevens overdragen naar servers in de Verenigde Staten op basis van standaard contractuele clausules.",
+          "Wij verkopen uw gegevens niet en delen ze niet met andere derden."
+        ]
+      },
+      {
+        "heading": "6. Uw rechten",
+        "paragraphs": [
+          "Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u het recht om toegang te vragen tot, te rectificeren of te verwijderen van persoonlijke gegevens die wij over u bewaren. U kunt uw analytische toestemming op elk moment intrekken door de cookies van uw browser te wissen.",
+          "Voor verzoeken met betrekking tot gegevens, neem contact met ons op via info@speedcubingbelgium.be."
+        ]
+      },
+      {
+        "heading": "7. Wijzigingen in dit beleid",
+        "paragraphs": [
+          "Wij kunnen dit Privacybeleid van tijd tot tijd bijwerken. De datum bovenaan deze pagina weerspiegelt de meest recente herziening. Voortgezet gebruik van de website na wijzigingen houdt aanvaarding van het bijgewerkte beleid in."
+        ]
+      }
+    ]
+  },
+
+  "terms": {
+    "hero": {
+      "title": "Algemene Voorwaarden",
+      "subtitle": "Laatst bijgewerkt: april 2025"
+    },
+    "sections": [
+      {
+        "heading": "1. Inleiding",
+        "paragraphs": [
+          "Deze Algemene Voorwaarden regelen uw gebruik van de Speedcubing Belgium-website (speedcubingbelgium.be), beheerd door Speedcubing Belgium, een non-profitorganisatie geregistreerd in België. Door de website te bezoeken of te gebruiken, gaat u akkoord met deze voorwaarden."
+        ]
+      },
+      {
+        "heading": "2. Gebruik van de website",
+        "paragraphs": [
+          "U mag deze website alleen gebruiken voor wettige, persoonlijke en niet-commerciële doeleinden. U mag de website niet misbruiken, verstoren of proberen ongeautoriseerde toegang te krijgen tot enig deel van de website of de onderliggende systemen.",
+          "Wij behouden ons het recht voor om de toegang tot de website op elk moment zonder kennisgeving te schorsen of te beëindigen."
+        ]
+      },
+      {
+        "heading": "3. Intellectuele eigendom",
+        "paragraphs": [
+          "Alle inhoud op deze website — inclusief tekst, afbeeldingen, logo's en broncode — is eigendom van Speedcubing Belgium, tenzij anders vermeld. U mag niets reproduceren, distribueren of afgeleide werken maken zonder onze voorafgaande schriftelijke toestemming.",
+          "De naam en het logo van Speedcubing Belgium zijn handelsmerken van de organisatie. De Rubik's Cube en gerelateerde puzzelmerken zijn handelsmerken van hun respectievelijke eigenaren."
+        ]
+      },
+      {
+        "heading": "4. Links naar derden",
+        "paragraphs": [
+          "Deze website bevat links naar websites van derden, waaronder de World Cube Association (worldcubeassociation.org). Deze links worden alleen voor uw gemak verstrekt. Wij hebben geen controle over die sites en aanvaarden geen verantwoordelijkheid voor hun inhoud, privacypraktijken of beschikbaarheid."
+        ]
+      },
+      {
+        "heading": "5. Beperking van aansprakelijkheid",
+        "paragraphs": [
+          "Wij streven ernaar de informatie nauwkeurig en actueel te houden, maar wij geven geen garanties met betrekking tot de volledigheid, nauwkeurigheid of betrouwbaarheid van de inhoud.",
+          "Voor zover toegestaan door het Belgisch recht, is Speedcubing Belgium niet aansprakelijk voor directe, indirecte of gevolgschade die voortvloeit uit uw gebruik van, of het niet kunnen gebruiken van, deze website."
+        ]
+      },
+      {
+        "heading": "6. Toepasselijk recht",
+        "paragraphs": [
+          "Deze Algemene Voorwaarden worden beheerst door het Belgisch recht. Geschillen die voortvloeien uit het gebruik van deze website vallen onder de exclusieve bevoegdheid van de Belgische rechtbanken."
+        ]
+      },
+      {
+        "heading": "7. Contact",
+        "paragraphs": [
+          "Als u vragen heeft over deze Algemene Voorwaarden, neem dan contact met ons op via info@speedcubingbelgium.be."
+        ]
+      }
+    ]
+  },
+
   "footer": {
     "about": {
       "heading": "Over SCB",
