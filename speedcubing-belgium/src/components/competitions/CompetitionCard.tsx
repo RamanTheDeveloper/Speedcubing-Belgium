@@ -38,7 +38,7 @@ const STATUS_LABELS: Record<RegistrationStatus, string> = {
   open: "Registration Open",
   closed: "Registration Closed",
   "not-yet-open": "Registration Soon",
-  live: "Registration Live",
+  live: "Competition Live",
 };
 
 export default function CompetitionCard({ competition }: CompetitionCardProps) {
