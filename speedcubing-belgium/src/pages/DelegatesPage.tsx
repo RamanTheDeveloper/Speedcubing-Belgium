@@ -14,7 +14,7 @@ import { useTranslation } from "../i18n";
 interface Delegate {
   id: string;
   name: string;
-  role: "Junior Delegate" | "Trainee Delegate";
+  role: "Junior Delegate" | "Trainee Delegate" | "Delegate";
   region: string;
   wcaId: string;
   email?: string;
@@ -23,15 +23,18 @@ interface Delegate {
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
-const JUNIOR_DELEGATES: Delegate[] = [
+const DELEGATES: Delegate[] = [
   {
-    id: "junior-1",
+    id: "delegate-1",
     name: "Nicolò Simone",
-    role: "Junior Delegate",
+    role: "Delegate",
     region: "Italy",
     wcaId: "2008SIMO02",
     avatar: nicoloImg,
   },
+];
+
+const JUNIOR_DELEGATES: Delegate[] = [
   {
     id: "junior-2",
     name: "Lisa Leukemans",
@@ -83,6 +86,7 @@ function RoleBadge({ role }: { role: Delegate["role"] }) {
   const styles: Record<Delegate["role"], string> = {
     "Junior Delegate": "bg-yellow-400 text-gray-900",
     "Trainee Delegate": "bg-gray-200 text-gray-700",
+    "Delegate": "bg-yellow-900 text-white",
   };
   return (
     <span
@@ -133,6 +137,51 @@ function Avatar({
   );
 }
 
+// ─── Delegates card ─────────────────────────────────────────────────────
+
+function DelegateCard({ delegate }: { delegate: Delegate }) {
+  const { t } = useTranslation();
+  return (
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 flex flex-col gap-4">
+      <div className="flex flex-col items-center justify-center text-center gap-4">
+        <Avatar src={delegate.avatar} name={delegate.name} size="lg" />
+        <div>
+          <p className="font-extrabold text-gray-900 text-lg">
+            {delegate.name}
+          </p>
+          <RoleBadge role={delegate.role} />
+          <p className="text-xs text-gray-400 mt-1">
+            {delegate.id === "delegate-1"
+              ? `${t.delegates.roles.role.region}`
+              : `${t.delegates.roles.role.region2}`}
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-2 mt-auto">
+        {delegate.email && (
+          <a
+            href={`mailto:${delegate.email}`}
+            className="flex items-center justify-center gap-2 text-sm font-semibold text-gray-700 border border-gray-200 rounded-lg py-2 hover:bg-gray-50 transition-colors"
+          >
+            <Mail size={14} />
+            Contact
+          </a>
+        )}
+        <a
+          href={`https://www.worldcubeassociation.org/persons/${delegate.wcaId}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 text-sm font-semibold bg-gray-900 text-white rounded-lg py-2 hover:bg-gray-700 transition-colors"
+        >
+          <ExternalLink size={14} />
+          {t.delegates.roles.role.profile}
+        </a>
+      </div>
+    </div>
+  );
+}
+
 // ─── Junior delegate card ─────────────────────────────────────────────────────
 
 function JuniorDelegateCard({ delegate }: { delegate: Delegate }) {
@@ -149,7 +198,7 @@ function JuniorDelegateCard({ delegate }: { delegate: Delegate }) {
           <p className="text-xs text-gray-400 mt-1">
             {delegate.id !== "junior-1"
               ? `${t.delegates.roles.role.region}`
-              : `${t.delegates.roles.role.region2}` }
+              : `${t.delegates.roles.role.region2}`}
           </p>
         </div>
       </div>
@@ -187,7 +236,9 @@ function TraineeDelegateCard({ delegate }: { delegate: Delegate }) {
       <div className="flex flex-col items-center text-center gap-4">
         <Avatar src={delegate.avatar} name={delegate.name} />
         <div>
-          <p className="font-extrabold text-gray-900 text-lg">{delegate.name}</p>
+          <p className="font-extrabold text-gray-900 text-lg">
+            {delegate.name}
+          </p>
           <RoleBadge role={delegate.role} />
           <p className="text-xs text-gray-400 mt-1">
             {t.delegates.roles.role.region}
@@ -266,6 +317,21 @@ export default function DelegatesPage() {
         </h2>
       </section>
 
+      {/* Delegates */}
+      <section className="px-6 py-10 max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-6">
+          <h3 className="text-lg font-extrabold text-gray-900">
+            {delegates.roles.role.delegate}
+          </h3>
+          <div className="flex-1 h-px bg-yellow-400" />
+        </div>
+        <div className="flex justify-center">
+          {DELEGATES.map((d) => (
+            <DelegateCard key={d.id} delegate={d} />
+          ))}
+        </div>
+      </section>
+
       {/* Junior Delegates */}
       <section className="px-6 py-10 max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-6">
@@ -274,7 +340,7 @@ export default function DelegatesPage() {
           </h3>
           <div className="flex-1 h-px bg-yellow-400" />
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="flex justify-center gap-4">
           {JUNIOR_DELEGATES.map((d) => (
             <JuniorDelegateCard key={d.id} delegate={d} />
           ))}

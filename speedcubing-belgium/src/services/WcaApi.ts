@@ -115,10 +115,13 @@ export async function fetchBelgiumCompetitions(): Promise<Competition[]> {
   }
 
   // Cache miss — fetch from WCA and populate cache
-  const today = toISODate(new Date());
+  const today = new Date();
+  const thirtyDaysAgo = new Date(today);
+  thirtyDaysAgo.setDate(today.getDate() - 30);
+  const startDate = toISODate(thirtyDaysAgo);
   const url = new URL(`${WCA_OFFICIAL_BASE}/competitions`);
   url.searchParams.set("country_iso2", "BE");
-  url.searchParams.set("start", today);
+  url.searchParams.set("start", startDate);
   url.searchParams.set("per_page", "50");
 
   const response = await fetch(url.toString());

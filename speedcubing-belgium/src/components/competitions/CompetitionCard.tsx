@@ -38,7 +38,7 @@ const STATUS_LABELS: Record<RegistrationStatus, string> = {
   open: "Registration Open",
   closed: "Registration Closed",
   "not-yet-open": "Registration Soon",
-  live: "Registration Live",
+  live: "Competition Live",
 };
 
 export default function CompetitionCard({ competition }: CompetitionCardProps) {
@@ -139,6 +139,17 @@ export default function CompetitionCard({ competition }: CompetitionCardProps) {
           >
             {status === comp.card.status.open ? comp.card.register : comp.card.view}{" "}
             <ArrowRight size={15} />
+          </a>
+        )}
+
+        {status === "live" && (
+          <a
+            href={`https://www.competitiongroups.com/competitions/${competition.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium bg-gray-100 text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 hover:border-gray-400 px-5 py-2.5 rounded-lg"
+          >
+            Groups
           </a>
         )}
 
