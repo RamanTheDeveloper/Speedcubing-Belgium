@@ -147,7 +147,7 @@ export default function CompetitionCard({ competition }: CompetitionCardProps) {
             href={`https://www.competitiongroups.com/competitions/${competition.id}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 hover:border-gray-400 px-5 py-2.5 rounded-lg"
+            className="text-sm font-medium bg-gray-100 text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 hover:border-gray-400 px-5 py-2.5 rounded-lg"
           >
             Groups
           </a>
