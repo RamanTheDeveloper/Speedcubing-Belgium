@@ -142,6 +142,17 @@ export default function CompetitionCard({ competition }: CompetitionCardProps) {
           </a>
         )}
 
+        {status === "live" && (
+          <a
+            href={`https://www.competitiongroups.com/competitions/${competition.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors border border-gray-200 hover:border-gray-400 px-5 py-2.5 rounded-lg"
+          >
+            Groups
+          </a>
+        )}
+
         {(status === comp.card.status.open || status === comp.card.status.live) && (
           <a
             href={url}
