@@ -222,6 +222,7 @@
       "role": {
         "junior": "Junior Delegate",
         "trainee": "Trainee Delegate",
+        "delegate": "Delegate",
         "region": "Region: Belgium",
         "region2": "Region: Italy",
         "profile": "WCA Profile"
