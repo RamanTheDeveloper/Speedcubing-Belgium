@@ -13,7 +13,7 @@
 
   "home": {
     "hero": {
-      "badge": "Officiële WCA Organisatie",
+      "badge": "WCA-wedstrijdorganisator",
       "title": "Welkom bij\nSpeedcubing Belgium",
       "subtitle": "Sluit je aan bij de snelst groeiende speedcubing-community in België",
       "primaryCta": { "label": "Bekijk Competities", "href": "#competitions" },
