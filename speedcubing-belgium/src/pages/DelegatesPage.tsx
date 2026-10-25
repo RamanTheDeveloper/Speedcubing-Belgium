@@ -325,7 +325,7 @@ export default function DelegatesPage() {
           </h3>
           <div className="flex-1 h-px bg-yellow-400" />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-4">
           {DELEGATES.map((d) => (
             <DelegateCard key={d.id} delegate={d} />
           ))}
