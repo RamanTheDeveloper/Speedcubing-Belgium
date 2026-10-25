@@ -32,17 +32,17 @@ const DELEGATES: Delegate[] = [
     wcaId: "2008SIMO02",
     avatar: nicoloImg,
   },
-];
-
-const JUNIOR_DELEGATES: Delegate[] = [
   {
-    id: "junior-2",
+    id: "delegate-2",
     name: "Lisa Leukemans",
-    role: "Junior Delegate",
+    role: "Delegate",
     region: "Belgium",
     wcaId: "2021LEUK01",
     avatar: lisaImg,
   },
+];
+
+const JUNIOR_DELEGATES: Delegate[] = [
   {
     id: "junior-3",
     name: "Clara Verbraeken",
